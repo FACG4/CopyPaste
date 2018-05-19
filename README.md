@@ -19,4 +19,4 @@ https://www.figma.com/proto/VWxnVmZPLNuL8k3TwiQOvuli/CopyPaste?node-id=106%3A0&s
 
 ### Tech Stack:
 
-
+`html` `css` `javaScript`
