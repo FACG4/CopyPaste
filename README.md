@@ -7,9 +7,14 @@ Customizable front-end template for building fast, robust, and adaptable web app
 
 ### Problem Statement:
 
-Wasting time on repetitive `html` and `css` code forweb developers every time they are building a new web app.
+Wasting time on repetitive `html` and `css` code for web developers every time they are building a new web app.
 
 ### User Stories:
+
+* As a web developer, I need an easy way to generate code for some components in my projects.
+* As a web developer, I want to navigate easily through the website.
+* As a web developer, I need an easy way to copy the resultant code and use it.
+
 
 
 ### Link for prototype:
