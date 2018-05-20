@@ -13,8 +13,6 @@ Wasting time on repetitive `html` and `css` code for web developers every time t
 
 * As a web developer, I need an easy way to generate code for navbar.
 * As a web developer, I need an easy way to generate code for login page.
-* As a web developer, I need an easy way to generate code for footer.
-* As a web developer, I need an easy way to generate code for signup.
 * As a web developer, I need an easy way to copy the resultant code and use it.
 * As a web developer, I want to navigate easily through the website.
 
