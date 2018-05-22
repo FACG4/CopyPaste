@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <meta charset="utf-8">
     <title>NavBar Page</title>
@@ -10,32 +11,50 @@
       <nav></nav>
     </header>
     <section class="nav-preview">
-      <p>preview</p>
+      <fieldset class="previewCss">
+    <legend >preview</legend>
+    <ul id='ul' class="preview">
+    </ul>
+
+    </fieldset>
     </section>
 
     <section class="nav-edit-container">
-        <input id="Main" type="radio" name="tabs" checked>
-        <label for="Main">Main</label>
-        <input id="Color" type="radio" name="tabs">
-        <label for="Color">Color</label>
-        <input id="Size" type="radio" name="tabs">
-        <label for="Size">Size</label>
-        <input id="Font" type="radio" name="tabs">
-        <label for="Font">Font</label>
-        <input id="Hover" type="radio" name="tabs">
-        <label for="Hover">Hover</label>
+      <input class="hidden" id="Main" type="radio" name="tabs" checked>
+      <label for="Main">Main</label>
+      <input class="hidden" id="Color" type="radio" name="tabs">
+      <label for="Color">Color</label>
+      <input class="hidden" id="Size" type="radio" name="tabs">
+      <label for="Size">Size</label>
+      <input class="hidden" id="Font" type="radio" name="tabs">
+      <label for="Font">Font</label>
+      <input class="hidden" id="Hover" type="radio" name="tabs">
+      <label for="Hover">Hover</label>
 
 
       <div class="nav-content" id="nav-main-details">
-        <p>main</p>
-        <input type="text" name="" value="">
-        <button type="button" name="button">add href</button>
+        <div class="navbarPositionContainer">
+          <input type="checkbox" class="navbarPosition" name="" value="">
+          <label for="positin">Positin Fixed.</label>
+
+        </div>
+        <div class="addLinkDiv">
+          <input type="button" name="" class="addNewLinkBtn" value="+">
+          <label for="addNewLinkBtn">Add Link</label>
+
+        </div>
+        <div class="main">
+          <div class="innerMainSectionForNavbar">
+          </div>
       </div>
+    </div>
+
       <div class="nav-content" id="nav-color-details">
         <p>color</p>
       </div>
+
       <div class="nav-content" id="nav-size-details">
-        <p>size</p>
+        Navbar width: <input type="number" name="navWidth" id="navWidth"><br> Navbar height: <input type="number" name="navHeight" id="navHeight">
       </div>
 
       <!-- Font Tab -->
@@ -84,10 +103,15 @@
       <div class="nav-content" id="nav-hover-details">
         <p>hover</p>
       </div>
-    </section>
 
-    <button type="button" name="generate-code">Generate Code</button>
-    <script type="text/javascript" src="./fonteditor.js"></script>
-    <footer></footer>
-  </body>
+  </section>
+
+  <button type="button" name="generate-code">Generate Code</button>
+
+  <footer></footer>
+  <script type="text/javascript" src="./js/fonteditor.js"></script>
+  <script type="text/javascript" src="./js/navbarDom.js">
+  </script>
+</body>
+
 </html>

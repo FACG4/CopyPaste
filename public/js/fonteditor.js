@@ -9,21 +9,16 @@ let selectedFontWeight = 'normal';
 let selectedFontFamily = 'Arial';
 
 
-
-fontStyleSelector.onchange = (e)=>{
+fontStyleSelector.onchange = (e) => {
   selectedFontStyle = e.target.value;
-  console.log(e.target.value);
-}
+};
 
-fontWeightSelector.onchange = (e)=>{
+fontWeightSelector.onchange = (e) => {
   selectedFontWeight = e.target.value;
-  console.log(e.target.value);
-}
-fontFamilySelector.onchange = (e)=>{
+};
+fontFamilySelector.onchange = (e) => {
   selectedFontFamily = e.target.value;
-  console.log(e.target.value);
-}
-fontSize.oninput = ()=>{
-  console.log(fontSize.value);
-  fontSizeSpan.textContent = fontSize.value + 'px'
-}
+};
+fontSize.oninput = () => {
+  fontSizeSpan.textContent = `${fontSize.value}px`;
+};
