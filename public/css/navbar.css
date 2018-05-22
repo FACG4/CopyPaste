@@ -50,7 +50,7 @@ p {
   border: 1px solid transparent;
   border-top-left-radius:25px;
 }
-.nav-edit-container input {
+.nav-edit-container > input {
   display: none;
 }
 
@@ -65,6 +65,19 @@ p {
   border-top: 2px solid orange;
   border-bottom: 1px solid #fff;
 }
+
+.font-editor{
+  display: grid;
+  grid-template-columns: auto;
+}
+
+.font-editor div label,
+.font-editor div select,
+.font-editor div input{
+  width: 200px;
+}
+
+
 
 #Main:checked ~ #nav-main-details,
 #Color:checked ~ #nav-color-details,

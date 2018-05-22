@@ -28,6 +28,7 @@
 
       <div class="nav-content" id="nav-main-details">
         <p>main</p>
+        <input type="text" name="" value="">
         <button type="button" name="button">add href</button>
       </div>
       <div class="nav-content" id="nav-color-details">
@@ -36,16 +37,57 @@
       <div class="nav-content" id="nav-size-details">
         <p>size</p>
       </div>
+
+      <!-- Font Tab -->
       <div class="nav-content" id="nav-font-details">
-        <p>font</p>
+        <div class="font-editor">
+          <div>
+
+            <label for="font-style">Font Style: </label>
+            <select id="font-style" name="font-style">
+              <option value="normal" >normal</option>
+              <option value="italic">italic</option>
+              <option value="oblique">oblique</option>
+            </select>
+          </div>
+
+          <div>
+
+            <label for="font-weight">Font Weight: </label>
+            <select id="font-weight" name="font-weight">
+              <option value="normal" >normal</option>
+              <option value="bold">bold</option>
+              <option value="bolder">bolder</option>
+              <option value="lighter">lighter</option>
+            </select>
+          </div>
+
+          <div >
+            <label for="font-family">Font Family: </label>
+            <select id="font-family" name="font-family">
+              <option value="Arial">Arial</option>
+              <option value="serif">serif</option>
+              <option value="Helvetica">Helvetica</option>
+            </select>
+          </div>
+
+          <div >
+            <label for="font-size">Font Size: </label>
+            <input id='font-size' type="range"  max="36" name="font-size">
+            <span id="font-size-value">18px</span>
+          </div>
+
+        </div>
       </div>
+      <!-- End Font Tab -->
+
       <div class="nav-content" id="nav-hover-details">
         <p>hover</p>
       </div>
     </section>
 
     <button type="button" name="generate-code">Generate Code</button>
-
+    <script type="text/javascript" src="./fonteditor.js"></script>
     <footer></footer>
   </body>
 </html>
