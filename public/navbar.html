@@ -1,49 +1,80 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html>
 
 <head>
   <meta charset="utf-8">
-  <title>Navbar</title>
+  <title>NavBar Page</title>
   <link rel="stylesheet" href="./css/navbar.css">
-
 </head>
 
 <body>
-  <ul id='ul'class="preview">
-    <!-- <li class="one active"><a href="#home">Home</a></li>
-    <li class="one"><a  href="#contact">Contact</a></li>
-    <li class="one"><a  href="#about">About</a></li> -->
-  </ul>
-  <div class="positionContainer">
-    <input type="checkbox" class="position" name="" value="">
-    <label for="positin">Positin Fixed.</label>
+  <header>
+    <nav></nav>
+  </header>
+  <section class="nav-preview">
+    <p>preview</p>
+    <ul id='ul' class="preview">
+    </ul>
+  </section>
 
-  </div>
-  <div class="addLinkBtn">
-    <input type="button" name="" class="addLink" value="+">
-    <label for="addLink">Add Link</label>
+  <section class="nav-edit-container">
+    <input class="hidden" id="Main" type="radio" name="tabs" checked>
+    <label for="Main">Main</label>
+    <input class="hidden" id="Color" type="radio" name="tabs">
+    <label for="Color">Color</label>
+    <input class="hidden" id="Size" type="radio" name="tabs">
+    <label for="Size">Size</label>
+    <input class="hidden" id="Font" type="radio" name="tabs">
+    <label for="Font">Font</label>
+    <input class="hidden" id="Hover" type="radio" name="tabs">
+    <label for="Hover">Hover</label>
 
-  </div>
-  <div class="main">
-    <div class="innerMain">
+
+    <div class="nav-content" id="nav-main-details">
+      <!-- <button type="button" name="button">add href</button> -->
+
+      <div class="positionContainer">
+        <input type="checkbox" class="position" name="" value="">
+        <label for="positin">Positin Fixed.</label>
+
+      </div>
+      <div class="addLinkBtn">
+        <input type="button" name="" class="addLink" value="+">
+        <label for="addLink">Add Link</label>
+
+      </div>
+      <div class="main">
+        <div class="innerMain">
+        </div>
+        <!-- <input type="submit" name="generate" value="generate" id="generate"> -->
+      </div>
+      <!-- <div class="" id="resultsCssUl">
+        </div>
+        <div class="" id="resultsCssLi">
+        </div>
+        <div class="" id="resultsHtml">
+        </div> -->
     </div>
 
-<input type="submit" name="generate" value="generate" id="generate">
+    <div class="nav-content" id="nav-color-details">
+      <p>color</p>
+    </div>
+    <div class="nav-content" id="nav-size-details">
+      Navbar width: <input type="number" name="navWidth" id="navWidth"><br> Navbar height: <input type="number" name="navHeight" id="navHeight">
+    </div>
+    <div class="nav-content" id="nav-font-details">
+      <p>font</p>
+    </div>
+    <div class="nav-content" id="nav-hover-details">
+      <p>hover</p>
+    </div>
+  </section>
 
-  </div>
+  <button type="button" name="generate-code">Generate Code</button>
 
-  <div class="" id="resultsCssUl">
-  </div>
-  <div class="" id="resultsCssLi">
-  </div>
-
-  <div class="" id="resultsHtml">
-  </div>
-
- 
-
+  <footer></footer>
 </body>
-
-</html>
 <script type="text/javascript" src="./js/navbarDom.js">
 </script>
+
+</html>

@@ -1,3 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100vh;
+}
+
+body {
+  font: 14px/1 'Open Sans', sans-serif;
+  color: #555;
+  background: #eee;
+}
+
+h1 {
+  padding: 50px 0;
+  font-weight: 400;
+  text-align: center;
+}
+
+p {
+  margin: 0 0 20px;
+  line-height: 1.5;
+}
+.nav-edit-container {
+  min-width: 320px;
+  max-width: 600px;
+  padding: 50px;
+  margin: 0 auto;
+  background: #fff;
+}
+
+.nav-content {
+  display: none;
+  padding: 20px 0 0;
+  border-top: 1px solid #ddd;
+}
+
+.nav-edit-container label {
+  display: inline-block;
+  margin: 0 0 -1px;
+  padding: 15px 25px;
+  font-weight: 600;
+  text-align: center;
+  color: #bbb;
+  border: 1px solid transparent;
+  border-top-left-radius:25px;
+}
+.nav-edit-container .hidden {
+  display: none;
+}
+
+.nav-edit-container label:hover {
+  color: #888;
+  cursor: pointer;
+}
+
+.nav-edit-container .hidden:checked + label {
+  color: #555;
+  border: 1px solid #ddd;
+  border-top: 2px solid orange;
+  border-bottom: 1px solid #fff;
+}
+
+#Main:checked ~ #nav-main-details,
+#Color:checked ~ #nav-color-details,
+#Size:checked ~ #nav-size-details,
+#Font:checked ~ #nav-font-details,
+#Hover:checked ~ #nav-hover-details{
+  display: block;
+}
+
 .addLink {
   width: 40px;
   height: 40px;
@@ -22,7 +98,6 @@
   text-align: center;
   height: 30px;
   border-radius: 3px;
-  /* position: fixed in check box */
 }
 .addLink:hover {
   background-color: white;
@@ -55,7 +130,7 @@ padding: 0;
 overflow: hidden;
 border: 1px solid #e7e7e7;
 background-color: #9bbef7;
-position: static;
+margin-bottom: 50px;
 }
 li {
 float: left;
