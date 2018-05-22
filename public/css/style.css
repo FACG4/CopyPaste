@@ -34,6 +34,7 @@ header, footer {
 footer {
     top: auto;
     bottom: 0;
+    height: 40px;
 }
 .container {
   margin: 100px auto;
