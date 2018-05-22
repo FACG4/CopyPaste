@@ -11,15 +11,14 @@ Wasting time on repetitive `html` and `css` code for web developers every time t
 
 ### User Stories:
 
+* As a web developer, I need to choose which component I want to edit.
 * As a web developer, I need an easy way to generate code for navbar.
 * As a web developer, I need an easy way to generate code for login page.
 * As a web developer, I need an easy way to copy the resultant code and use it.
 * As a web developer, I want to navigate easily through the website.
 
 
-
 ### Link for prototype:
-
 https://www.figma.com/proto/VWxnVmZPLNuL8k3TwiQOvuli/CopyPaste?node-id=106%3A0&scaling=contain
 
 
