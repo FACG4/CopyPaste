@@ -5,45 +5,69 @@
   <meta charset="utf-8">
   <title>NavBar Page</title>
   <link rel="stylesheet" href="./css/navbar.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 </head>
 
+
 <body>
+  <header>
+    <img class="logo" src="images/papers.svg" alt="logo">
+    <div class="head">
+      <h1 class="title"><span class='yellow'>C</span>opy<span class='red'>P</span>aste</h1>
+      <h2 class="title">Get your code fast!</h2>
+    </div>
+  </header>
 
 
-
-
-
-  <section class="nav-preview">
+  <section class="navPreview">
     <fieldset class="previewCss">
-<legend >preview</legend>
-<ul id='ul' class="preview">
-</ul>
+      <legend>preview</legend>
+      <ul id='ul' class="preview">
+      </ul>
 
-</fieldset>
+    </fieldset>
   </section>
 
-  <section class="nav-edit-container">
+  <section class="navEditContainer">
     <input class="hidden" id="Main" type="radio" name="tabs" checked>
     <label for="Main">Main</label>
+
+
     <input class="hidden" id="Color" type="radio" name="tabs">
     <label for="Color">Color</label>
-    <input class="hidden" id="Size" type="radio" name="tabs">
-    <label for="Size">Size</label>
+
+
+    <!-- <input class="hidden" id="Size" type="radio" name="tabs">
+    <label for="Size">Size</label> -->
+
+
     <input class="hidden" id="Font" type="radio" name="tabs">
     <label for="Font">Font</label>
+
+
     <input class="hidden" id="Hover" type="radio" name="tabs">
     <label for="Hover">Hover</label>
 
 
     <div class="nav-content" id="nav-main-details">
       <div class="navbarPositionContainer">
-        <input type="checkbox" class="navbarPosition" name="" value="">
-        <label for="positin">Positin Fixed.</label>
+        <span class="label">Padding</span> &nbsp; &nbsp;
+        <input type="number" class="paddingInputForNavbar" name="paddingInputForNavbar" value=""><br><br>
+
+        <span class="label">Navbar height </span>
+        <input type="number" class="heightInputForNavbar" name="navHeight" id="navHeight"><br><br>
+
+
+
+        <span class="label">Fixed Positin</span>
+        <input type="checkbox" class="navbarPosition" name="" value=""><br><br><br>
 
       </div>
       <div class="addLinkDiv">
         <input type="button" name="" class="addNewLinkBtn" value="+">
-        <label for="addNewLinkBtn">Add Link</label>
+        <span class="labelForAddingLinkBtn">Add Link</span>
 
       </div>
       <div class="main">
@@ -54,9 +78,14 @@
     <div class="nav-content" id="nav-color-details">
       <p>color</p>
     </div>
-    <div class="nav-content" id="nav-size-details">
-      Navbar width: <input type="number" name="navWidth" id="navWidth"><br> Navbar height: <input type="number" name="navHeight" id="navHeight">
-    </div>
+
+
+
+    <!-- <div class="nav-content" id="nav-size-details">
+    </div> -->
+
+
+
     <div class="nav-content" id="nav-font-details">
       <p>font</p>
     </div>
@@ -65,9 +94,43 @@
     </div>
   </section>
 
-  <button type="button" name="generate-code">Generate Code</button>
 
-  <footer></footer>
+  <div class="GenerateCodeDiv">
+    <button type="button" name="generateCodeButton" class="generateCodeButton">Generate Code</button>
+  </div>
+
+
+
+
+
+<!-- resulllllllllllllllllllllllllllllllllllts -->
+
+<container class="resultContainer">
+  <input type="button" name="Back" value="Back" class="backToEditing">
+
+  <div class="cssCode">
+    <h3 style="text-align:center">CSS</h3>
+    <br>
+    <div class="finalCssCode">
+    </div>
+  </div>
+
+
+  <div class="htmlCode">
+    <h3 style="text-align:center">HTML</h3>
+    <br>
+    <div class="finalHtmlCode">
+    </div>
+  </div>
+
+</container>
+
+
+
+
+  <footer>
+      <h4 class="title footerText">Made with <i class="fas fa-heart light"></i></h4>
+  </footer>
 </body>
 <script type="text/javascript" src="./js/navbarDom.js">
 </script>
