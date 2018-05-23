@@ -70,10 +70,15 @@ p {
   display: grid;
   grid-template-columns: auto;
 }
+.size-editor{
+  text-align: center;
+}
 
 .font-editor div label,
 .font-editor div select,
-.font-editor div input{
+.font-editor div input,
+.size-editor div label,
+.size-editor div input{
   width: 200px;
 }
 

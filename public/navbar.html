@@ -54,7 +54,12 @@
       </div>
 
       <div class="nav-content" id="nav-size-details">
-        Navbar width: <input type="number" name="navWidth" id="navWidth"><br> Navbar height: <input type="number" name="navHeight" id="navHeight">
+        <div class="size-editor">
+          <label for="navWidth">Navbar Width: </label>
+          <input type="number" name="navWidth" id="navWidth"><br>
+          <label for="navHeight">Navbar Height: </label>
+          <input type="number" name="navHeight" id="navHeight">
+        </div>
       </div>
 
       <!-- Font Tab -->
@@ -86,7 +91,9 @@
             <select id="font-family" name="font-family">
               <option value="Arial">Arial</option>
               <option value="serif">serif</option>
-              <option value="Helvetica">Helvetica</option>
+              <option value="cursive">cursive</option>
+              <option value="fantasy">fantasy</option>
+              <option value="monospace">monospace</option>
             </select>
           </div>
 
@@ -109,9 +116,9 @@
   <button type="button" name="generate-code">Generate Code</button>
 
   <footer></footer>
+  <script type="text/javascript" src="./js/navbarDom.js"></script>
   <script type="text/javascript" src="./js/fonteditor.js"></script>
-  <script type="text/javascript" src="./js/navbarDom.js">
-  </script>
+
 </body>
 
 </html>
