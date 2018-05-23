@@ -30,69 +30,102 @@
     </fieldset>
   </section>
 
-  <section class="navEditContainer">
+
+
+  <section class="navEditContainer ">
     <input class="hidden" id="Main" type="radio" name="tabs" checked>
     <label for="Main">Main</label>
-
-
     <input class="hidden" id="Color" type="radio" name="tabs">
     <label for="Color">Color</label>
-
-
-    <!-- <input class="hidden" id="Size" type="radio" name="tabs">
-    <label for="Size">Size</label> -->
-
-
     <input class="hidden" id="Font" type="radio" name="tabs">
     <label for="Font">Font</label>
-
-
     <input class="hidden" id="Hover" type="radio" name="tabs">
     <label for="Hover">Hover</label>
 
 
-    <div class="nav-content" id="nav-main-details">
-      <div class="navbarPositionContainer">
+      <div class="nav-content" id="nav-main-details">
+        <div class="navbarPositionContainer">
         <span class="label">Padding</span> &nbsp; &nbsp;
         <input type="number" class="paddingInputForNavbar" name="paddingInputForNavbar" value=""><br><br>
-
         <span class="label">Navbar height </span>
         <input type="number" class="heightInputForNavbar" name="navHeight" id="navHeight"><br><br>
-
-
-
         <span class="label">Fixed Positin</span>
         <input type="checkbox" class="navbarPosition" name="" value=""><br><br><br>
 
-      </div>
-      <div class="addLinkDiv">
-        <input type="button" name="" class="addNewLinkBtn" value="+">
-        <span class="labelForAddingLinkBtn">Add Link</span>
+        </div>
+        <div class="addLinkDiv">
+          <input type="button" name="" class="addNewLinkBtn" value="+">
+          <label for="addNewLinkBtn">Add Link</label>
 
+        </div>
+
+
+<!--             <div class="addLinkDiv">
+        <input type="button" name="" class="addNewLinkBtn" value="+">
+        <span class="labelForAddingLinkBtn">Add Link</span> -->
+
+        <div class="main">
+          <div class="innerMainSectionForNavbar">
+          </div>
       </div>
-      <div class="main">
-        <div class="innerMainSectionForNavbar">
+    </div>
+
+      <div class="nav-content" id="nav-color-details">
+        <p>color</p>
+      </div>
+
+
+      <!-- Font Tab -->
+      <div class="nav-content" id="nav-font-details">
+        <div class="font-editor">
+          <div>
+
+            <label for="font-style">Font Style: </label>
+            <select id="font-style" name="font-style">
+              <option value="normal" >normal</option>
+              <option value="italic">italic</option>
+              <option value="oblique">oblique</option>
+            </select>
+          </div>
+
+          <div>
+
+            <label for="font-weight">Font Weight: </label>
+            <select id="font-weight" name="font-weight">
+              <option value="normal" >normal</option>
+              <option value="bold">bold</option>
+              <option value="bolder">bolder</option>
+              <option value="lighter">lighter</option>
+            </select>
+          </div>
+
+          <div >
+            <label for="font-family">Font Family: </label>
+            <select id="font-family" name="font-family">
+              <option value="Arial">Arial</option>
+              <option value="serif">serif</option>
+              <option value="Helvetica">Helvetica</option>
+            </select>
+          </div>
+
+          <div >
+            <label for="font-size">Font Size: </label>
+            <input id='font-size' type="range"  max="36" name="font-size">
+            <span id="font-size-value">18px</span>
+          </div>
+
         </div>
       </div>
-    </div>
-    <div class="nav-content" id="nav-color-details">
-      <p>color</p>
-    </div>
+
+      <!-- End Font Tab -->
 
 
+      <div class="nav-content" id="nav-hover-details">
+        <p>hover</p>
+      </div>
 
-    <!-- <div class="nav-content" id="nav-size-details">
-    </div> -->
-
-
-
-    <div class="nav-content" id="nav-font-details">
-      <p>font</p>
-    </div>
-    <div class="nav-content" id="nav-hover-details">
-      <p>hover</p>
-    </div>
   </section>
+
 
 
   <div class="GenerateCodeDiv">
@@ -131,8 +164,11 @@
   <footer>
       <h4 class="title footerText">Made with <i class="fas fa-heart light"></i></h4>
   </footer>
+
+  <script type="text/javascript" src="./js/fonteditor.js"></script>
+  <script type="text/javascript" src="./js/navbarDom.js">
+  </script>
+
 </body>
-<script type="text/javascript" src="./js/navbarDom.js">
-</script>
 
 </html>

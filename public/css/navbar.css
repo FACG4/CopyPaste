@@ -60,7 +60,7 @@ p {
   cursor: pointer;
 }
 
-.navEditContainer label {
+.navEditContainer .hidden label {
      color: #3B5998;
   border: 1px solid #ddd;
   border-bottom: 1px solid #fff;
@@ -74,7 +74,24 @@ p {
 }
 
 
-#Main:checked~#nav-main-details, #Color:checked~#nav-color-details, #Size:checked~#nav-size-details, #Font:checked~#nav-font-details, #Hover:checked~#nav-hover-details {
+.font-editor{
+  display: grid;
+  grid-template-columns: auto;
+}
+
+.font-editor div label,
+.font-editor div select,
+.font-editor div input{
+  width: 200px;
+}
+
+
+
+#Main:checked ~ #nav-main-details,
+#Color:checked ~ #nav-color-details,
+#Size:checked ~ #nav-size-details,
+#Font:checked ~ #nav-font-details,
+#Hover:checked ~ #nav-hover-details{
   display: block;
 }
 
