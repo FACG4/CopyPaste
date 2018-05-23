@@ -66,15 +66,34 @@ p {
   border-bottom: 1px solid #fff;
 }
 
-.font-editor{
+.font-editor,.color-editor{
   display: grid;
   grid-template-columns: auto;
 }
+.size-editor{
+  text-align: center;
+}
+
 
 .font-editor div label,
 .font-editor div select,
-.font-editor div input{
+.font-editor div input,
+.size-editor div label,
+.size-editor div input{
   width: 200px;
+}
+
+.color-editor div label{
+  width: 15rem;
+}
+.color-editor div select{
+  width: 6rem;
+}
+.color-editor div input{
+  font-size: 18px;
+  text-align: center;
+  margin-left: 10px;
+  width: 8rem;
 }
 
 
@@ -134,31 +153,6 @@ border-color: DodgerBlue;
 
 }
 
-.preview {
-width:100%;
-height: 50px;
-list-style-type: none;
-margin: 0;
-padding: 0;
-overflow: hidden;
-border: 1px solid #e7e7e7;
-background-color: #9bbef7;
-margin-bottom: 50px;
-}
-li {
-float: left;
-padding-bottom:80%;
-text-align: center;
-
-}
-
-li a {
-display: block;
-color: #666;
-text-align: center;
-padding: 14px 16px;
-text-decoration: none;
-}
 .previewCss {
 width: 80%;
  padding: 0.2em 0.8em;
@@ -168,5 +162,7 @@ border: 1px black solid;
 
 .nav-preview {
   margin-left: 15%;
-
+}
+.redBorder{
+  border: 2px solid red;
 }

@@ -13,6 +13,7 @@ const navbarPositionContainer = select('.navbarPositionContainer')
 const innerMainSectionForNavbar = select(".innerMainSectionForNavbar");
 const navbarPosition = select(".navbarPosition");
 const navbarPreview = select(".preview");
+let counter = 0;
 
 
 navbarPosition.addEventListener('change', () => {
@@ -34,20 +35,23 @@ paddingInputForNavbar.addEventListener('input', () => {
 })
 
 addNewLinkBtn.addEventListener("click", () => {
+  counter++ ;
   const br = document.createElement("br");
   const newLinkTitle = create('input');
+  newLinkTitle.setAttribute('id' , `newLinkTitle-${counter}`)
 
   //adding event addEventListene
   newLinkTitle.addEventListener('keyup', (e) => {
     if (e.which == 13) {
       newLiElementInNavbar = create('li');
+      newLiElementInNavbar.setAttribute('id' , `newLiElementInNavbar-${counter}`)
       newHrefInNavbar = create('a');
       navbarPreview.appendChild(newLiElementInNavbar);
       newLiElementInNavbar.appendChild(newHrefInNavbar);
       newHrefInNavbar.textContent = newLinkTitle.value;
-
     }
   })
+
   newLinkTitle.setAttribute("class", "newLinkTitle");
   newLinkTitle.setAttribute("placeholder", "Enter the text of the link...");
   const href = create('span');
@@ -55,13 +59,13 @@ addNewLinkBtn.addEventListener("click", () => {
   newLinkTitle.setAttribute("style", "margin-left:30px;");
   innerMainSectionForNavbar.appendChild(newLinkTitle);
   const newLinkHref = create('input');
+  newLinkHref.setAttribute('id' , `newLinkHref-${counter}`)
 
   //adding event addEventListener
   newLinkHref.addEventListener('keyup', (e) => {
     if (e.which == 13) {
       const newHref = newLinkHref.value;
       newHrefInNavbar.setAttribute('href', newHref)
-
     }
   })
 
@@ -83,19 +87,22 @@ addNewLinkBtn.addEventListener("click", () => {
   floatInner.id = "floatInner";
   innerMainSectionForNavbar.appendChild(floatInner);
   option0.text = 'select';
-  option1.value = 'left';
+  option1.value = `left-${counter}`;
   option1.text = 'left';
-  option2.value = 'right';
+  option2.value = `right-${counter}`;
   option2.text = 'right';
   floatInner.appendChild(option0);
   floatInner.appendChild(option1);
   floatInner.appendChild(option2);
 
   floatInner.addEventListener('change', () => {
-    if (floatInner.value === 'left') {
-      newLiElementInNavbar.style.float = 'left';
+    let id = floatInner.value.split('-')[1];
+    let float = floatInner.value.split('-')[0];
+
+    if (float === 'left') {
+      select(`#newLiElementInNavbar-${id}`).style.float = 'left';
     } else {
-      newLiElementInNavbar.style.float = 'right';
+      select(`#newLiElementInNavbar-${id}`).style.float = 'right';
     }
   })
   innerMainSectionForNavbar.appendChild(br);
