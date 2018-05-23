@@ -1,0 +1,18 @@
+/* .hidden{
+  display: none
+} */
+/* .block{
+  display: inline-block;
+} */
+.redBorder{
+  border: 2px solid red;
+}
+
+.nav-color-detail{
+  display: grid;
+  grid-template-columns: auto;
+}
+.row label , .row select{
+  width: 200px;
+
+}
