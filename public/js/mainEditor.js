@@ -27,14 +27,10 @@ const backToEditing = select('.backToEditing');
 const navEditContainer = select('.navEditContainer');
 const navPreview = select('.navPreview');
 const resultContainer = select('.resultContainer');
-const finalCssCode = select('.finalCssCode');
 const navbarHeight = select('.navbarHeight');
 const GenerateCodeDiv = select('.GenerateCodeDiv');
 
 
-
-const cssCode = select('.cssCode');
-const htmlCode = select('.htmlCode');
 paddingInputForNavbar.setAttribute('class', 'newLinkTitle')
 
 let counter = 1;
@@ -112,7 +108,6 @@ addNewLinkBtn.addEventListener("click", function() {
     navbarPreview.appendChild(newLiElementInNavbar);
     newLiElementInNavbar.appendChild(newHrefInNavbar);
     newHrefInNavbar.textContent = newLinkTitle.value;
-    // newHrefInNavbar.textContent = select(`#newLinkTitle-${counter}`).value;
 
     const newHref = newLinkHref.value;
     newHrefInNavbar.setAttribute('href', newHref)
@@ -155,8 +150,6 @@ generateCode.addEventListener('click', function(){
   GenerateCodeDiv.style.display = 'none';
   resultContainer.style.display = 'block';
   backToEditing.style.display = 'block';
-
-
 })
 
 backToEditing.addEventListener('click' , function(){
