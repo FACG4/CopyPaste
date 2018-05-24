@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
 *, *:before, *:after {
   margin: 0;
   padding: 0;
@@ -10,7 +9,6 @@ html, body {
 }
 
 body {
-  font: 14px/1 'Open Sans', sans-serif;
   color: #555;
   background: white;
 }
@@ -89,7 +87,6 @@ p {
 
 #Main:checked ~ #nav-main-details,
 #Color:checked ~ #nav-color-details,
-#Size:checked ~ #nav-size-details,
 #Font:checked ~ #nav-font-details,
 #Hover:checked ~ #nav-hover-details{
   display: block;
@@ -158,31 +155,7 @@ p {
   margin-left: 20px;
 }
 
-.preview {
-  width: 100%;
-  height: 50px;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  border: 1px solid #e7e7e7;
-  background-color: #9bbef7;
-  margin-bottom: 50px;
-}
 
-li {
-  float: left;
-  padding-bottom: 80%;
-  text-align: center;
-}
-
-li a {
-  display: block;
-  color: #666;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
 
 .previewCss {
   width: 80%;

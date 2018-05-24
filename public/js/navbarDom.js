@@ -40,24 +40,24 @@ let navbarHeight = '50';
 
 
 
-navbarPosition.addEventListener('change', () => {
+navbarPosition.addEventListener('change', function() {
   if (!this.checked) {
 defaultPositionForNavbar = "fixed";
   }
 })
 
 
-paddingInputForNavbar.addEventListener('input', () => {
+paddingInputForNavbar.addEventListener('input', function() {
   navbarPreview.style.padding = paddingInputForNavbar.value + 'px';
   defaultPAddingForNavbar=paddingInputForNavbar.value ;
 })
 
-navHeight.addEventListener('input', () => {
+navHeight.addEventListener('input', function() {
   navbarPreview.style.height = navHeight.value + 'px';
     navbarHeight=navHeight.value ;
 })
 
-addNewLinkBtn.addEventListener("click", () => {
+addNewLinkBtn.addEventListener("click", function() {
 
   const br = document.createElement("br");
 
@@ -145,7 +145,7 @@ addNewLinkBtn.addEventListener("click", () => {
 
 
 // generate code button >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-generateCodeButton.addEventListener('click', ()=>{
+generateCodeButton.addEventListener('click', function(){
 
 
 
@@ -178,7 +178,7 @@ finalHtmlCode.textContent = `<ul>
 })
 
 
-backToEditing.addEventListener('click' , ()=>{
+backToEditing.addEventListener('click' , function(){
   navEditContainer.style.display = 'block';
   navPreview.style.display = 'block';
   generateCodeButton.style.display = 'block';

@@ -24,9 +24,9 @@
   <section class="navPreview">
     <fieldset class="previewCss">
       <legend>preview</legend>
-      <ul id='ul' class="preview">
-      </ul>
-
+        <ul class="cp-navbar-container">
+          <li id="cp-navbar-fix-holder"></li>
+        </ul>
     </fieldset>
   </section>
 
@@ -60,9 +60,6 @@
         </div>
 
 
-<!--             <div class="addLinkDiv">
-        <input type="button" name="" class="addNewLinkBtn" value="+">
-        <span class="labelForAddingLinkBtn">Add Link</span> -->
 
         <div class="main">
           <div class="innerMainSectionForNavbar">
@@ -70,10 +67,47 @@
       </div>
     </div>
 
-      <div class="nav-content" id="nav-color-details">
-        <p>color</p>
-      </div>
+ <div class="nav-color-detail nav-content"  id="nav-color-details">
+      <div class="color-editor">
+        <div class="row nav-color-background-div" id="nav-color-background-div">
+        <label for="nav-background-color-option">Navbar Background Color</label>
 
+        <select class="color-select" id="nav-background-color-option">
+        <option value="nav-color-input-HEX-navbackground-color" > Hex</option>
+        <option value="nav-color-input-RGB-navbackground-color"> RGB</option>
+        <option value="nav-color-input-inputColor-navbackground-color" > Input-Color</option>
+        </select>
+
+        <input type="text" maxlength = "6" class="color-input  nav-color-input-HEX " id="nav-color-input-HEX-navbackground-color" placeholder="fc120a">
+
+          <input type="text" class="color-input  nav-color-input-RGB " id="nav-color-input-RGB-navbackground-color" placeholder="125,85,200">
+        <input type="color" class="color-input  nav-color-input-color " id="nav-color-input-inputColor-navbackground-color" >
+      </div>
+      <div class="row  nav-color-link-div">
+        <label for="nav-color-link-option">Links Color</label>
+          <select class="color-select" id="nav-color-link-option">
+          <option value="nav-color-input-HEX-link-color" > Hex</option>
+          <option value="nav-color-input-RGB-link-color" > RGB</option>
+          <option value="nav-color-input-inputColor-link-color"> Input-Color</option>
+          </select>
+          <input type="text" maxlength = "6" class="color-input  nav-color-input-HEX " id="nav-color-input-HEX-link-color"  placeholder="fc120a">
+          <input type="text" class="color-input  nav-color-input-RGB " id="nav-color-input-RGB-link-color" placeholder="125,85,200">
+          <input type="color" class="color-input  nav-color-input-color " id="nav-color-input-inputColor-link-color">
+            </div>
+      <div class="row" id="nav-color-active-link-option">
+      <label for="nav-color-active-link-option">Active links Color</label>
+        <select class="color-select" id="nav-color-active-link-option">
+        <option value="nav-color-input-HEX-active-link-color"> Hex</option>
+        <option value="nav-color-input-RGB-active-link-color"> RGB</option>
+        <option value="nav-color-input-inputColor-active-link-color"> Input-Color</option>
+        </select>
+        <input type="text" maxlength = "6" class="color-input  nav-color-input-HEX " id="nav-color-input-HEX-active-link-color"  placeholder="fc120a">
+        <input type="text" class="color-input  nav-color-input-RGB " id="nav-color-input-RGB-active-link-color" placeholder="125,85,200">
+        <input type="color" class="color-input  nav-color-input-color " id="nav-color-input-inputColor-active-link-color">
+
+      </div>
+    </div>
+  </div>
 
       <!-- Font Tab -->
       <div class="nav-content" id="nav-font-details">
@@ -104,14 +138,16 @@
             <select id="font-family" name="font-family">
               <option value="Arial">Arial</option>
               <option value="serif">serif</option>
-              <option value="Helvetica">Helvetica</option>
+              <option value="cursive">cursive</option>
+              <option value="fantasy">fantasy</option>
+              <option value="monospace">monospace</option>
             </select>
           </div>
 
           <div >
             <label for="font-size">Font Size: </label>
-            <input id='font-size' type="range"  max="36" name="font-size">
-            <span id="font-size-value">18px</span>
+            <input id='font-size' type="range"  min=".5" max="3" step=".1" name="font-size">
+            <span id="font-size-value">1.75 em</span>
           </div>
 
         </div>
@@ -120,8 +156,34 @@
       <!-- End Font Tab -->
 
 
-      <div class="nav-content" id="nav-hover-details">
-        <p>hover</p>
+           <div class="nav-content" id="nav-hover-details">
+        <div class="hover-editor">
+
+
+          <div class="row nav-hovor-link-background-color-div" id="nav-hovor-link-background-color-div">
+          <label for="nav-hover-color-option">Hovor link Background Color</label>
+
+          <select class="color-select" id="nav-hover-color-option">
+          <option value="nav-color-input-HEX-hovor-color" > Hex</option>
+          <option value="nav-color-input-RGB-hovor-color"> RGB</option>
+          <option value="nav-color-input-inputColor-hovor-color" > Input-Color</option>
+          </select>
+
+          <input type="text" maxlength = "6" class="color-input nav-hovor-input   nav-hover-input-HEX " id="nav-color-input-HEX-hovor-color" placeholder="fc120a">
+          <input type="text" class=" color-input nav-hover-input   nav-hover-input-RGB " id="nav-color-input-RGB-hovor-color" placeholder="125,85,200">
+          <input type="color" class="color-input nav-hover-input   nav-hover-input-color " id="nav-color-input-inputColor-hovor-color" >
+        </div>
+          <div class="row nav-hovor-link-background-color-div" id="nav-hovor-link-background-color-div">
+            <label class="checkboxContainer">Add underline when hover on link
+              <input type="checkbox"  id="textDecorationCheck">
+              <span class="checkmark"></span>
+            </label>
+
+          </div>
+
+
+        </div>
+
       </div>
 
   </section>
@@ -136,7 +198,6 @@
 
 
 
-<!-- resulllllllllllllllllllllllllllllllllllts -->
 
 <container class="resultContainer">
   <input type="button" name="Back" value="Back" class="backToEditing">
@@ -165,9 +226,11 @@
       <h4 class="title footerText">Made with <i class="fas fa-heart light"></i></h4>
   </footer>
 
+  <script type="text/javascript" src="./js/css_writer.js"></script>
+  <script type="text/javascript" src="./js/navbarDom.js"></script>
+  <script type="text/javascript" src="./js/coloreditor.js"></script>
   <script type="text/javascript" src="./js/fonteditor.js"></script>
-  <script type="text/javascript" src="./js/navbarDom.js">
-  </script>
+  <script type="text/javascript" src="./js/hovereditor.js"></script>
 
 </body>
 

@@ -4,21 +4,21 @@ const fontFamilySelector = document.getElementById('font-family');
 const fontSize = document.getElementById('font-size');
 const fontSizeSpan = document.getElementById('font-size-value');
 
-let selectedFontStyle = 'normal';
-let selectedFontWeight = 'normal';
-let selectedFontFamily = 'Arial';
-
-
-fontStyleSelector.onchange = (e) => {
-  selectedFontStyle = e.target.value;
+fontStyleSelector.onchange = function(e) {
+  cssWriter('.cp-navbar-container > li a', 'font-style', e.currentTarget.value)
 };
 
-fontWeightSelector.onchange = (e) => {
-  selectedFontWeight = e.target.value;
+fontWeightSelector.onchange = function(e) {
+  cssWriter('.cp-navbar-container > li a', 'font-weight', e.currentTarget.value)
 };
-fontFamilySelector.onchange = (e) => {
-  selectedFontFamily = e.target.value;
+
+fontFamilySelector.onchange = function(e) {
+  cssWriter('.cp-navbar-container > li a', 'font-family', e.currentTarget.value);
 };
-fontSize.oninput = () => {
-  fontSizeSpan.textContent = `${fontSize.value}px`;
+
+
+fontSize.oninput = function(e) {
+  fontSizeSpan.textContent = e.currentTarget.value + ' em';
+  cssWriter('.cp-navbar-container > li a', 'font-size', e.currentTarget.value + 'em')
+
 };
