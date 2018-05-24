@@ -23,6 +23,16 @@ const navbarPosition = select(".navbarPosition");
 const navbarPreview = select(".cp-navbar-container");
 const paddingInputForNavbar = select('.paddingInputForNavbar')
 const generateCode = select('.generateCodeButton');
+const backToEditing = select('.backToEditing');
+const navEditContainer = select('.navEditContainer');
+const navPreview = select('.navPreview');
+const resultContainer = select('.resultContainer');
+const finalCssCode = select('.finalCssCode');
+const navbarHeight = select('.navbarHeight');
+const GenerateCodeDiv = select('.GenerateCodeDiv');
+
+
+
 const cssCode = select('.cssCode');
 const htmlCode = select('.htmlCode');
 paddingInputForNavbar.setAttribute('class', 'newLinkTitle')
@@ -136,10 +146,32 @@ addNewLinkBtn.addEventListener("click", function() {
   }
 });
 
+
+
 // generate code button >>>>>>>>>>>>>>>>>>>>
-generateCode.addEventListener('click', function() {
-  
+generateCode.addEventListener('click', function(){
+  navEditContainer.style.display = 'none';
+  navPreview.style.display = 'none';
+  GenerateCodeDiv.style.display = 'none';
+  resultContainer.style.display = 'block';
+  backToEditing.style.display = 'block';
+
+
 })
+
+backToEditing.addEventListener('click' , function(){
+  navEditContainer.style.display = 'block';
+  navPreview.style.display = 'block';
+  GenerateCodeDiv.style.display = 'block';
+  resultContainer.style.display = 'none';
+  backToEditing.style.display = 'none';
+})
+
+
+
+
+
+
 
 let editFlag = false;
 
