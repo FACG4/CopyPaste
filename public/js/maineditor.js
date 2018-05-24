@@ -1,8 +1,8 @@
-const select = (selector) => {
+const select = function(selector) {
   return document.querySelector(selector);
 }
 
-const create = (element) => {
+const create = function(element) {
   return document.createElement(element);
 }
 const innerMainSectionForNavbar = select(".innerMainSectionForNavbar");
@@ -36,22 +36,22 @@ let floatLabel;
 let defaultPositionForNavbar = "static";
 
 
-navbarPosition.addEventListener('change', () => {
+navbarPosition.addEventListener('change', function() {
   if (!this.checked) {
     defaultPositionForNavbar = "fixed";
   }
 })
 
 
-paddingInputForNavbar.addEventListener('input', () => {
-  document.querySelectorAll('li').forEach(e => {
+paddingInputForNavbar.addEventListener('input', function() {
+  document.querySelectorAll('li').forEach(function(e) {
     navbarPreview.style.padding = paddingInputForNavbar.value + 'px';
     e.style.padding = paddingInputForNavbar.value + 'px';
   })
 })
 
 
-addNewLinkBtn.addEventListener("click", () => {
+addNewLinkBtn.addEventListener("click", function() {
 
   const br = document.createElement("br");
 
@@ -120,7 +120,7 @@ addNewLinkBtn.addEventListener("click", () => {
       select(`#newLiElementInNavbar-${id}`).style.float = 'right';
     }
 
-    document.querySelectorAll('ul').forEach(e => {
+    document.querySelectorAll('ul').forEach(function(e) {
       e = create('option');
       e.textContent = select(`#newLiElementInNavbar-${id}`).getElementsByTagName('a')[0].textContent;
       linksAddedToNavbar.appendChild(e)
@@ -137,7 +137,7 @@ addNewLinkBtn.addEventListener("click", () => {
 });
 
 // generate code button >>>>>>>>>>>>>>>>>>>>
-generateCode.addEventListener('click', () => {
+generateCode.addEventListener('click', function() {
   cssCode.innerHTML = `.ul{
     width: ${navWidth.value}px;<br>
     height: ${navHeight.value}px;<br>
@@ -149,7 +149,7 @@ generateCode.addEventListener('click', () => {
 
 let editFlag = false;
 
-linksAddedToNavbar.onchange = (e) => {
+linksAddedToNavbar.onchange = function(e) {
 
   let el1 = document.getElementById(`newLiElementInNavbar-${e.target.selectedIndex}`).textContent;
   let link1 = document.getElementById(`newLiElementInNavbar-${e.target.selectedIndex}`).getElementsByTagName('a')[0].getAttribute("href");
@@ -185,7 +185,7 @@ linksAddedToNavbar.onchange = (e) => {
   editFloat.appendChild(option01);
   editFloat.appendChild(option02);
 
-  editButton.addEventListener('click', () => {
+  editButton.addEventListener('click', function() {
     if (editFlag === false) {
       document.getElementById(`newLiElementInNavbar-${e.target.selectedIndex}`).getElementsByTagName('a')[0].textContent = editTextInput.value;
       document.getElementById(`newLiElementInNavbar-${e.target.selectedIndex}`).getElementsByTagName('a')[0].href = editLinkInput.value;
