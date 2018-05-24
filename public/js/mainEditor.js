@@ -5,6 +5,11 @@ const select = function(selector) {
 const create = function(element) {
   return document.createElement(element);
 }
+
+Object.prototype.insertAfter = function (newNode,fix) {
+   this.insertBefore(newNode, fix.nextSibling);
+ }
+
 const innerMainSectionForNavbar = select(".innerMainSectionForNavbar");
 const editLinksDiv = select(".editLinksDiv");
 
@@ -25,6 +30,7 @@ const paddingInputForNavbar = select('.paddingInputForNavbar')
 const generateCode = select('.generateCodeButton');
 const cssCode = select('.cssCode');
 const htmlCode = select('.htmlCode');
+const cpNavbarFixHolder = select('#cp-navbar-fix-holder');
 paddingInputForNavbar.setAttribute('class', 'newLinkTitle')
 
 let counter = 1;
@@ -102,7 +108,6 @@ addNewLinkBtn.addEventListener("click", function() {
     navbarPreview.appendChild(newLiElementInNavbar);
     newLiElementInNavbar.appendChild(newHrefInNavbar);
     newHrefInNavbar.textContent = newLinkTitle.value;
-    // newHrefInNavbar.textContent = select(`#newLinkTitle-${counter}`).value;
 
     const newHref = newLinkHref.value;
     newHrefInNavbar.setAttribute('href', newHref)
@@ -113,11 +118,10 @@ addNewLinkBtn.addEventListener("click", function() {
     let floatValueSelected = floatInner.value.split('-')[0];
 
     if (floatValueSelected === 'left') {
-      select(`#newLiElementInNavbar-${id}`).style.float = 'left';
+      navbarPreview.insertBefore(newLiElementInNavbar, cpNavbarFixHolder);
     }
      else if (floatValueSelected === 'right') {
-      console.log(select(`#newLiElementInNavbar-${id}`));
-      select(`#newLiElementInNavbar-${id}`).style.float = 'right';
+       navbarPreview.insertAfter(newLiElementInNavbar, navbarPreview.lastChild);
     }
 
     document.querySelectorAll('ul').forEach(function(e) {
@@ -138,7 +142,7 @@ addNewLinkBtn.addEventListener("click", function() {
 
 // generate code button >>>>>>>>>>>>>>>>>>>>
 generateCode.addEventListener('click', function() {
-  
+
 })
 
 let editFlag = false;
@@ -183,7 +187,13 @@ linksAddedToNavbar.onchange = function(e) {
     if (!editFlag) {
       document.getElementById(`newLiElementInNavbar-${e.target.selectedIndex}`).getElementsByTagName('a')[0].textContent = editTextInput.value;
       document.getElementById(`newLiElementInNavbar-${e.target.selectedIndex}`).getElementsByTagName('a')[0].href = editLinkInput.value;
-      document.getElementById(`newLiElementInNavbar-${e.target.selectedIndex}`).style.float = editFloat.value;
+      if (editFloat.value === 'left') {
+        navbarPreview.insertBefore(document.getElementById(`newLiElementInNavbar-${e.target.selectedIndex}`), cpNavbarFixHolder);
+      }
+       else if (editFloat.value === 'right') {
+         navbarPreview.insertAfter(document.getElementById(`newLiElementInNavbar-${e.target.selectedIndex}`), navbarPreview.lastChild);
+      }
+
       linksAddedToNavbar.options[linksAddedToNavbar.selectedIndex].textContent = editTextInput.value;
       editFlag = true;
     }
