@@ -56,7 +56,7 @@ addNewLinkBtn.addEventListener("click", function() {
   const br = document.createElement("br");
 
 
-  if (flag === false) {
+  if (!flag) {
     newLinkTitle = create('input');
     newLinkHref = create('input');
     floatInner = create('select');
@@ -138,13 +138,7 @@ addNewLinkBtn.addEventListener("click", function() {
 
 // generate code button >>>>>>>>>>>>>>>>>>>>
 generateCode.addEventListener('click', function() {
-  cssCode.innerHTML = `.ul{
-    width: ${navWidth.value}px;<br>
-    height: ${navHeight.value}px;<br>
-    padding: ${paddingInputForNavbar.value}px;<br>
-    position: ${defaultPositionForNavbar}<br>
-  }`
-  htmlCode.textContent = "sallam"
+  
 })
 
 let editFlag = false;
@@ -186,7 +180,7 @@ linksAddedToNavbar.onchange = function(e) {
   editFloat.appendChild(option02);
 
   editButton.addEventListener('click', function() {
-    if (editFlag === false) {
+    if (!editFlag) {
       document.getElementById(`newLiElementInNavbar-${e.target.selectedIndex}`).getElementsByTagName('a')[0].textContent = editTextInput.value;
       document.getElementById(`newLiElementInNavbar-${e.target.selectedIndex}`).getElementsByTagName('a')[0].href = editLinkInput.value;
       document.getElementById(`newLiElementInNavbar-${e.target.selectedIndex}`).style.float = editFloat.value;
