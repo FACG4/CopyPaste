@@ -4,7 +4,6 @@ const fontFamilySelector = document.getElementById('font-family');
 const fontSize = document.getElementById('font-size');
 const fontSizeSpan = document.getElementById('font-size-value');
 
-
 fontStyleSelector.onchange = function(e) {
   cssWriter('.cp-navbar-container > li a', 'font-style', e.currentTarget.value)
 };
@@ -21,4 +20,5 @@ fontFamilySelector.onchange = function(e) {
 fontSize.oninput = function(e) {
   fontSizeSpan.textContent = e.currentTarget.value + ' em';
   cssWriter('.cp-navbar-container > li a', 'font-size', e.currentTarget.value + 'em')
+
 };
