@@ -1,7 +1,3 @@
-const generateNavbarCodeButton=document.querySelector('#generateNavbarCodeButton')
-const cssCodeList = document.getElementById('cssCodeList')
-const htmlCodeList = document.getElementById('htmlCodeList')
-const resultContainer = document.querySelector('.resultContainer')
 const allSections=select('.allSections')
 generateNavbarCodeButton.addEventListener('click',function(e){
   let cssCode=''
@@ -28,7 +24,6 @@ generateNavbarCodeButton.addEventListener('click',function(e){
   htmlCodeList.textContent=document.getElementById('cp-navbar-container').innerHTML
 
 })
-const backToEditing=document.querySelector('#backToEditing')
 backToEditing.addEventListener('click',function(e){
 resultContainer.style.display='none'
 allSections.style.display='block'
