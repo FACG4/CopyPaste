@@ -24,11 +24,6 @@ header, footer {
   height: 100px;
 }
 
-footer{
-  bottom: 0px;
-  position: fixed;
-}
-
 .head {
   padding-left: 10px;
   text-align: left;
@@ -63,6 +58,16 @@ footer {
   top: auto;
   bottom: 0;
   height: 50px;
+  float: none;
+  position: fixed;
+ }
+
+
+@media (max-width: 600px) {
+  .divForFooter  {
+         position: relative;
+         /* float: none; */
+margin-left: auto;  }
 }
 
 .container {
