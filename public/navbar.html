@@ -21,12 +21,18 @@
   </header>
 
 
+<div class="allSections">
+
+
   <section class="navPreview">
     <fieldset class="previewCss">
       <legend>preview</legend>
-        <ul class="cp-navbar-container">
+      <nav id="cp-navbar-container">
+
+        <ul class="cp-navbar-container" >
           <li id="cp-navbar-fix-holder"></li>
         </ul>
+      </nav>
     </fieldset>
   </section>
 
@@ -190,37 +196,42 @@
 
   </section>
 
-
-
   <div class="GenerateCodeDiv">
-    <button type="button" name="generateCodeButton" class="generateCodeButton">Generate Code</button>
+    <button type="button" id="generateNavbarCodeButton" class="generateCodeButton">Generate Code</button>
   </div>
 
 
+</div>
 
 
 
 
-<container class="resultContainer">
-  <input type="button" name="Back" value="Back" class="backToEditing">
+
+
+<section class="resultContainer">
+  <input type="button" name="Back" value="Back" class="backToEditing" id='backToEditing'>
+
+<div class="result">
 
   <div class="cssCode">
     <h3 style="text-align:center">CSS</h3>
-    <br>
-    <div class="finalCssCode">
-    </div>
+    <textarea name="name" id="cssCodeList" ></textarea>
+
+    <input type="button"  value="Copy" class="copybtn" id='copyCssBtn'>
+
+
   </div>
 
 
   <div class="htmlCode">
     <h3 style="text-align:center">HTML</h3>
-    <br>
-    <div class="finalHtmlCode">
-    </div>
+    <textarea name="name" id="htmlCodeList"></textarea>
+
+    <input type="button"  value="Copy" class="copybtn" id='copyHtmlBtn'>
+  </div>
   </div>
 
-</container>
-
+</section>
 
 
 
@@ -233,6 +244,7 @@
   <script type="text/javascript" src="./js/coloreditor.js"></script>
   <script type="text/javascript" src="./js/fonteditor.js"></script>
   <script type="text/javascript" src="./js/hovereditor.js"></script>
+  <script type="text/javascript" src="./js/generator.js"></script>
 
 </body>
 

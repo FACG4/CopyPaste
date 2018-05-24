@@ -35,14 +35,6 @@ let floatInner;
 let floatLabel;
 let defaultPositionForNavbar = "static";
 
-
-navbarPosition.addEventListener('change', function() {
-  if (!this.checked) {
-    defaultPositionForNavbar = "fixed";
-  }
-})
-
-
 paddingInputForNavbar.addEventListener('input', function() {
   document.querySelectorAll('li').forEach(function(e) {
     navbarPreview.style.padding = paddingInputForNavbar.value + 'px';
@@ -102,7 +94,6 @@ addNewLinkBtn.addEventListener("click", function() {
     navbarPreview.appendChild(newLiElementInNavbar);
     newLiElementInNavbar.appendChild(newHrefInNavbar);
     newHrefInNavbar.textContent = newLinkTitle.value;
-    // newHrefInNavbar.textContent = select(`#newLinkTitle-${counter}`).value;
 
     const newHref = newLinkHref.value;
     newHrefInNavbar.setAttribute('href', newHref)
@@ -136,16 +127,6 @@ addNewLinkBtn.addEventListener("click", function() {
   }
 });
 
-// generate code button >>>>>>>>>>>>>>>>>>>>
-generateCode.addEventListener('click', function() {
-  cssCode.innerHTML = `.ul{
-    width: ${navWidth.value}px;<br>
-    height: ${navHeight.value}px;<br>
-    padding: ${paddingInputForNavbar.value}px;<br>
-    position: ${defaultPositionForNavbar}<br>
-  }`
-  htmlCode.textContent = "sallam"
-})
 
 let editFlag = false;
 

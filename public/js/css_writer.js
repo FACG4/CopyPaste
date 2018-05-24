@@ -71,4 +71,3 @@ const style = [
 style.forEach(function (item) {
   styleSheet.insertRule(item, styleSheet.cssRules.length);
 });
-cssWriter('li', 'float', 'right');
