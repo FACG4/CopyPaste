@@ -229,6 +229,9 @@ p {
 }
 
 .cssCode ,.htmlCode{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: left;
   background-color: #E9EFFC;
   border-radius: 10px;
@@ -247,7 +250,7 @@ textarea{
 
 
 
-.backToEditing{
+.backToEditing, .copybtn{
   background-color: #EF5552;
   height: 30px;
   width: 60px;

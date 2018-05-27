@@ -1,6 +1,7 @@
 const allSections=select('.allSections')
 generateNavbarCodeButton.addEventListener('click',function(e){
-  let cssCode=''
+
+  let cssCode='*{margin:0;padding:0;}'
   resultContainer.style.display='flex'
   allSections.style.display='none'
   while (cssCodeList.firstChild) {
@@ -12,14 +13,13 @@ generateNavbarCodeButton.addEventListener('click',function(e){
     let cssText = styleSheet.cssRules[i].cssText;
     if (rule.selectorText  === '.cp-navbar-container'&&navbarPosition.checked) {
         let prop=styleSheet.cssRules[i].cssText.split(';');
-        prop.splice(prop.length-1,0,'position : fixed; top:0')
+        prop.splice(prop.length-1,0,'position : fixed; top:0;right:0;left:0;')
         prop=prop.join(';')
         cssText=prop
       }
-      cssCode=cssText
-      cssCodeList.textContent+=cssCode
-      cssCodeList.textContent+='\r'
+      cssCode+=cssText+'\r'
   }
+  cssCodeList.textContent=cssCode
 
   htmlCodeList.textContent=document.getElementById('cp-navbar-container').innerHTML
 
