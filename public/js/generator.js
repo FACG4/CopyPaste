@@ -33,10 +33,10 @@ allSections.style.display='block'
 const copyCssBtn= document.getElementById('copyCssBtn')
 copyCssBtn.addEventListener('click',function(e){
   cssCodeList.select();
- document.execCommand("copy");
+ document.execCommand('copy');
 })
 const copyHtmlBtn= document.getElementById('copyHtmlBtn')
 copyHtmlBtn.addEventListener('click',function(e){
   htmlCodeList.select();
- document.execCommand("copy");
+ document.execCommand('copy');
 })
