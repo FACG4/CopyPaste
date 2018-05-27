@@ -22,6 +22,9 @@ cssWriter = function(selector, property, value){
 const style = [
 
 `  .cp-navbar-container > li {
+
+  display:flex;
+  align-items:center;
     padding: 10px;
     text-align: center;
     box-sizing: border-box;
@@ -36,7 +39,7 @@ const style = [
 `,
 
 ` .cp-navbar-container {
-    display: flex;
+  display: flex;
     background-color: #96ceb4;
 
   }`,
