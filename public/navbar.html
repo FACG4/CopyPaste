@@ -21,12 +21,18 @@
   </header>
 
 
+<div class="allSections">
+
+
   <section class="navPreview">
     <fieldset class="previewCss">
       <legend>preview</legend>
-        <ul class="cp-navbar-container">
+      <nav id="cp-navbar-container">
+
+        <ul class="cp-navbar-container" >
           <li id="cp-navbar-fix-holder"></li>
         </ul>
+      </nav>
     </fieldset>
   </section>
 
@@ -45,8 +51,6 @@
 
       <div class="nav-content" id="nav-main-details">
         <div class="navbarPositionContainer">
-        <span class="label">Padding</span> &nbsp; &nbsp;
-        <input type="number" class="paddingInputForNavbar" name="paddingInputForNavbar" value=""><br><br>
         <span class="label">Navbar height </span>
         <input type="number" class="heightInputForNavbar" name="navHeight" id="navHeight"><br><br>
         <span class="label">Fixed Positin</span>
@@ -166,16 +170,16 @@
           <label for="nav-hover-color-option">Hovor link Background Color</label>
 
           <select class="color-select" id="nav-hover-color-option">
-          <option value="nav-color-input-HEX-hovor-color" > Hex</option>
-          <option value="nav-color-input-RGB-hovor-color"> RGB</option>
-          <option value="nav-color-input-inputColor-hovor-color" > Input-Color</option>
+          <option value="nav-color-input-HEX-hover-color" > Hex</option>
+          <option value="nav-color-input-RGB-hover-color"> RGB</option>
+          <option value="nav-color-input-inputColor-hover-color" > Input-Color</option>
           </select>
 
-          <input type="text" maxlength = "6" class="color-input nav-hovor-input   nav-hover-input-HEX " id="nav-color-input-HEX-hovor-color" placeholder="fc120a">
-          <input type="text" class=" color-input nav-hover-input   nav-hover-input-RGB " id="nav-color-input-RGB-hovor-color" placeholder="125,85,200">
-          <input type="color" class="color-input nav-hover-input   nav-hover-input-color " id="nav-color-input-inputColor-hovor-color" >
+          <input type="text" maxlength = "6" class="color-input nav-hovor-input   nav-hover-input-HEX " id="nav-color-input-HEX-hover-color" placeholder="fc120a">
+          <input type="text" class=" color-input nav-hover-input   nav-hover-input-RGB " id="nav-color-input-RGB-hover-color" placeholder="125,85,200">
+          <input type="color" class="color-input nav-hover-input   nav-hover-input-color " id="nav-color-input-inputColor-hover-color" >
         </div>
-          <div class="row nav-hovor-link-background-color-div" id="nav-hovor-link-background-color-div">
+          <div class="row nav-hovor-link-background-color-div" id="nav-hover-link-background-color-div">
             <label class="checkboxContainer">Add underline when hover on link
               <input type="checkbox"  id="textDecorationCheck">
               <span class="checkmark"></span>
@@ -190,11 +194,12 @@
 
   </section>
 
-
-
   <div class="GenerateCodeDiv">
-    <button type="button" name="generateCodeButton" class="generateCodeButton">Generate Code</button>
+    <button type="button" id="generateNavbarCodeButton" class="generateCodeButton">Generate Code</button>
   </div>
+
+
+</div>
 
 
 
@@ -202,25 +207,29 @@
 
 
 <section class="resultContainer">
-  <input type="button" name="Back" value="Back" class="backToEditing">
+  <input type="button" name="Back" value="Back" class="backToEditing" id='backToEditing'>
+
+<div class="result">
 
   <div class="cssCode">
     <h3 style="text-align:center">CSS</h3>
-    <br>
-    <div class="finalCssCode">
-    </div>
+    <textarea name="name" id="cssCodeList" ></textarea>
+
+    <input type="button"  value="Copy" class="copybtn" id='copyCssBtn'>
+
+
   </div>
 
 
   <div class="htmlCode">
     <h3 style="text-align:center">HTML</h3>
-    <br>
-    <div class="finalHtmlCode">
-    </div>
+    <textarea name="name" id="htmlCodeList"></textarea>
+
+    <input type="button"  value="Copy" class="copybtn" id='copyHtmlBtn'>
+  </div>
   </div>
 
 </section>
-
 
 
 
@@ -233,6 +242,8 @@
   <script type="text/javascript" src="./js/colorEditor.js"></script>
   <script type="text/javascript" src="./js/fontEditor.js"></script>
   <script type="text/javascript" src="./js/hoverEditor.js"></script>
+  <script type="text/javascript" src="./js/generator.js"></script>
+
 
 </body>
 

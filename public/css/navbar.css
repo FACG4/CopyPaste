@@ -69,16 +69,22 @@ p {
   background-color: #3B5998;
 }
 
-
-.font-editor{
-  display: grid;
-  grid-template-columns: auto;
-}
-
 .font-editor div label,
 .font-editor div select,
-.font-editor div input{
+.font-editor div input {
   width: 200px;
+}
+.color-editor div label{
+  width: 15rem;
+}
+.color-editor div select{
+  width: 6rem;
+}
+.color-editor div input{
+  font-size: 18px;
+  text-align: center;
+  margin-left: 10px;
+  width: 8rem;
 }
 
 
@@ -222,31 +228,31 @@ p {
   padding-left: 15px;
 }
 
-.cssCode{
+.cssCode ,.htmlCode{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: left;
+  justify-content: space-around;
   background-color: #E9EFFC;
   border-radius: 10px;
-  width: 20%;
-  height: auto;
-  padding: 15px;
- float: left;
- margin-left: 330px;
-
+width: 30%;
+margin: 50px;
+height: 250px;
+}
+textarea{
+  width: 80%;
+  height: 150px;
 }
 
-.htmlCode{
-  text-align: left;
-  background-color: #E9EFFC;
-  border-radius: 10px;
-  width: 20%;
-  height: auto;
-  padding: 15px;
-float: right;
-margin-right: 330px;
+.finalCssCode{
+  max-height: 200px;
+  overflow: auto;
 }
 
 
-.backToEditing{
+
+.backToEditing, .copybtn{
   background-color: #EF5552;
   height: 30px;
   width: 60px;
@@ -257,9 +263,17 @@ margin-right: 330px;
 
  .resultContainer{
    display: none;
-   margin-top: 80px;
- }
+   flex-direction: column;
+  justify-content: center;
+  height: 70%;
+  flex-wrap:wrap;
 
+ }
+.result{
+  display: flex;
+     justify-content: center;
+     /* padding: 200px; */
+}
  .preview {
   list-style-type: none;
   margin: 0;
@@ -270,17 +284,7 @@ margin-right: 330px;
   margin-bottom: 50px;
 }
 
-li {
-  float: left;
-  text-align: center;
-}
 
-li a {
-  display: block;
-  color: #666;
-  text-align: center;
-  text-decoration: none;
-}
 .editBtn {
   background-color: #3B5998;
   color: white;
@@ -289,6 +293,7 @@ li a {
   width: 70px;
   font-weight: bold;
   margin-bottom: 30px;
+
 }
 #navbarLinks {
   height: 35px;
