@@ -1,19 +1,28 @@
 <link rel="stylesheet" href="/css/style.css">
+
 <div class="centeredTitle">
-  <h1 class="welcomeInUserPage">Welcome {{name}}, <span class="userpageTitle">here you can find your code!<span></h1>
+  <h1>Welcome {{capitalize name}}, here you can find your code!</h1>
 
 </div>
 <div class="htmlCode">
+<h3 style="text-align:center">HTML</h3>
 
-  {{#each code}}
-    <li>{{this.html_code}}</li><br>
-    {{/each}}
+
+  {{#each htmlCode}}
+  <li>{{this.html_code}}</li>
+  {{/each}}
+
+
 </div>
 
+
 <div class="cssCode">
-  <br><br><br>
-  {{#each code}}
-    <li>{{this.css_code}}</li><br>
+  <h3 style="text-align:center">CSS</h3>
+
+
+  {{#each cssCode}}
+    <li>{{this.css_code}}</li>
   {{/each}}
+
 
 </div>

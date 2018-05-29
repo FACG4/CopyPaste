@@ -9,10 +9,15 @@ CREATE TABLE users(
   password VARCHAR NOT NULL
 );
 
-CREATE TABLE codes(
+CREATE TABLE CssCodes(
   id SERIAL PRIMARY KEY,
-  html_code text ,
-  css_code text ,
+   css_code text ,
+  user_id INTEGER REFERENCES users(id)
+);
+
+CREATE TABLE HtmlCodes(
+  id SERIAL PRIMARY KEY,
+   html_code text ,
   user_id INTEGER REFERENCES users(id)
 );
 
@@ -22,14 +27,6 @@ INSERT INTO users(name, email, password) VALUES
 ('Mohammed','mohammed@gmail.com','123'),
 ('Sallam','sallamtanna2015@hotmail.com','00');
 
-INSERT INTO codes (user_id,html_code,css_code) VALUES
-(1,'<ul><li>Home</li></ul>', '.navbar{ color:red;}'),
-(2,'<ul><li>About</li></ul>', '.navbar{ color:blue;}'),
-(3,'<ul><li>Contact</li></ul>', '.navbar{ color:black;}'),
-(3,'<ul><li>Log Outtttttt</li></ul>', '.navbar{ color:white5;}'),
-(2,'<ul><li>Log Outttttt</li></ul>', '.navbar{ color:white4;}'),
-(4,'<ul><li>Log Outtttt</li></ul>', '.navbar{ color:white3;}'),
-(4,'<ul><li>Log Outtt</li></ul>', '.navbar{ color:white2;}'),
-(4,'<ul><li>Log Outt</li></ul>', '.navbar{ color:white1;}');
+
 
 COMMIT;

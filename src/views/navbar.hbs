@@ -1,12 +1,12 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+<link rel="stylesheet" href="/css/navbar.css">
+<link rel="stylesheet" href="/css/style.css">
 
 <div class="allSections">
   <section class="navPreview">
     <fieldset class="previewCss">
       <legend>preview</legend>
       <nav id="cp-navbar-container">
-
         <ul class="cp-navbar-container">
           <li id="cp-navbar-fix-holder"></li>
         </ul>
@@ -74,7 +74,7 @@
           <input type="color" class="color-input  nav-color-input-color " id="nav-color-input-inputColor-link-color">
         </div>
         <div class="row" id="nav-color-active-link-div">
-          <label for="nav-color-active-link-option" >Active links Color</label>
+          <label for="nav-color-active-link-option">Active links Color</label>
           <select class="color-select" id="nav-color-active-link-option">
         <option value="nav-color-input-HEX-active-link-color"> Hex</option>
         <option value="nav-color-input-RGB-active-link-color"> RGB</option>
@@ -167,30 +167,26 @@
 </div>
 
 <section class="resultContainer">
-<button type="button" name="Back" class="backToEditing" id="backToEditing"><i class="fas fa-angle-left"></i>Back</button>
+  <button type="button" name="Back" class="backToEditing" id="backToEditing"><i class="fas fa-angle-left"></i>Back</button>
 
   <div class="result">
 
     <div class="cssCode">
       <h3 style="text-align:center">CSS</h3>
-
-
-
       <form action="/insertCssCode" method="post">
-        <textarea name="cssCodeList" id="cssCodeList" rows="20" cols="25"></textarea>
-        <input title="Copied CSS code will be stored in your profile :)" type="submit" value="Copy" name="copyCssBtn" class="copybtn" id='copyCssBtn'>
+        <textarea class="textarea" name="cssCodeList" id="cssCodeList" rows="20" cols="25"></textarea>
+        <input type="submit" value="Save" name="saveCssBtn" class="copybtn" title="Saved code will be added into your profile :)">
       </form>
+      <input type="button" value="Copy" name="copyCssBtn" class="copybtn" id='copyCssBtn'>
     </div>
-
-
-    
 
     <div class="htmlCode">
       <h3 style="text-align:center">HTML</h3>
-      <form class="" action="/insertHtmlCode" method="post">
-        <textarea name="htmlCodeList" id="htmlCodeList" rows="20" cols="25"></textarea>
-        <input  title="Copied HTML code will be stored in your profile :)" type="submit" value="Copy" class="copybtn" id='copyHtmlBtn'>
+      <form action="insertHtmlCode" method="post">
+        <textarea class="textarea" name="htmlCodeList" id="htmlCodeList" rows="20" cols="25"></textarea>
+        <input type="submit" value="Save"  name="saveHtmlBtn" class="copybtn" title="Saved code will be added into your profile :)">
       </form>
+      <input type="button" value="Copy" class="copybtn" id='copyHtmlBtn'>
     </div>
   </div>
 </section>

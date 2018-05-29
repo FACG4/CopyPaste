@@ -11,9 +11,20 @@ exports.selectAllUsers = (email, cb) => {
   })
 }
 
-exports.selectCodes = (user_id, cb) => {
+// exports.selectCodes = (user_id, cb) => {
+//   const sql = {
+//     text: `SELECT * FROM codes WHERE user_id=($1)`,
+//     values: [user_id]
+//   };
+//   connection.query(sql, (err, result) => {
+//     if (err) return cb(err)
+//     cb(null, result.rows)
+//   })
+// }
+
+exports.selectHtmlCodes = (user_id, cb) => {
   const sql = {
-    text: `SELECT * FROM codes WHERE user_id=($1)`,
+    text: `SELECT html_code FROM htmlCodes WHERE user_id=($1)`,
     values: [user_id]
   };
   connection.query(sql, (err, result) => {
@@ -22,30 +33,11 @@ exports.selectCodes = (user_id, cb) => {
   })
 }
 
-// exports.selectHtmlCodes = (user_id, cb) => {
-//   const sql = {
-//     text: `SELECT html_code FROM codes WHERE user_id=($1)`,
-//     values: [user_id]
-//   };
-//   connection.query(sql, (err, result) => {
-//     if (err) return cb(err)
-//     cb(null, result.rows)
-//   })
-// }
-//
-// exports.selectCssCodes = (user_id, cb) => {
-//   const sql = {
-//     text: `SELECT css_code FROM codes WHERE user_id=($1)`,
-//     values: [user_id]
-//   };
-//   connection.query(sql, (err, result) => {
-//     if (err) return cb(err)
-//     cb(null, result.rows)
-//   })
-// }
-
-exports.selecAllIds = (cb) => {
-  const sql = `SELECT id FROM users`;
+exports.selectCssCodes = (user_id, cb) => {
+  const sql = {
+    text: `SELECT css_code FROM CssCodes WHERE user_id=($1)`,
+    values: [user_id]
+  };
   connection.query(sql, (err, result) => {
     if (err) return cb(err)
     cb(null, result.rows)

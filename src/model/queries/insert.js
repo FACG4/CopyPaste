@@ -12,8 +12,8 @@ exports.insertUser = (name, email, password, cb) => {
 };
 
 exports.insertHtmlCodes = (user_id, htmlCode, cb) => {
-  const sql = {
-    text: `INSERT INTO codes(user_id,html_code) VALUES($1,$2)`,
+   const sql = {
+    text: `INSERT INTO HtmlCodes(user_id,html_code) VALUES($1,$2)`,
     values: [user_id, htmlCode]
   };
   connection.query(sql, (err, res) => {
@@ -23,14 +23,12 @@ exports.insertHtmlCodes = (user_id, htmlCode, cb) => {
 };
 
 exports.insertCssCodes = (user_id, cssCode, cb) => {
-  console.log('ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff');
-  const sql = {
-    text: `INSERT INTO codes(user_id, css_code) VALUES($1,$2)`,
+    const sql = {
+    text: `INSERT INTO CssCodes(user_id, css_code) VALUES($1,$2)`,
     values: [user_id, cssCode]
   };
   connection.query(sql, (err, res) => {
-    console.log('ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd');
-    if (err) return cb(err);
+     if (err) return cb(err);
     cb(null, res);
   });
 };

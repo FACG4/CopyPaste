@@ -14,8 +14,7 @@ else {
     else {
       insert.insertCssCodes(result.id , cssCodeList, (err,resInsert)=>{
         if(err) {return res.status(500);}
-        // go to hell
-        res.redirect('/navbar')
+          res.redirect('/userpage')
       })
     }
   })
@@ -34,7 +33,7 @@ else {
     else {
       insert.insertHtmlCodes(result.id , htmlCodeList, (err,resInsert)=>{
         if(err) {return res.status(500);}
-         res.redirect('/navbar')
+         res.redirect('/userpage')
       })
     }
   })

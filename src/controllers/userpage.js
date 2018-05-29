@@ -13,17 +13,22 @@ exports.get = (req, res) => {
     } else {
 
 
-      select.selectCodes(jwtresult.id, (error, result) => {
-        console.log(result, 'rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr');
+      select.selectHtmlCodes(jwtresult.id, (error, result) => {
         if (error) return res.status(500);
         else {
-
-          const code  = result;
+          const htmlCode  = result;
           const name = jwtresult.username;
-          res.render('userpage', {
-            code,
-            name
-          });
+          select.selectCssCodes(jwtresult.id, (error2, result2)=>{
+            if(error2) return res.status(500)
+            else {
+              const cssCode = result2;
+              res.render('userpage', {
+                htmlCode,
+                cssCode,
+                name
+              });
+            }
+          })
          }
       })
     }
