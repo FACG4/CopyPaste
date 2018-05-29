@@ -56,19 +56,20 @@ const coloring=function(id,colorType,colorTarget,value){
     }
 
   }
-  else if(colorType=='inputColor') {
+  else if(colorType==='inputColor') {
     color=value
   }
-  if (colorTarget=='navbackground') {
+  if (colorTarget==='navbackground') {
     cssWriter( ".cp-navbar-container", "background-color", color);
 
-  }else if (colorTarget=='link') {
+  }else if (colorTarget==='link') {
     cssWriter( ".cp-navbar-container > li a", "color", color);
 
-
-
-  }else if (colorTarget='hover') {
+  }else if (colorTarget==='hover') {
     cssWriter('.cp-navbar-container > .cp-list:hover','background-color',color)
+
+  }else if (colorTarget==='active') {
+    cssWriter('.cp-navbar-container > li a.active','color',color)
 
   }
 }

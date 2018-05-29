@@ -23,14 +23,13 @@ header, footer {
   width: 100%;
   height: 100px;
 }
-
 .whiteColor {
   color: white;
 }
-
 .head {
   padding-left: 10px;
   text-align: left;
+
 }
 
 .red {
@@ -49,12 +48,13 @@ header, footer {
   animation: myColor 1.2s infinite;
 }
 
+
 @keyframes myColor {
   from {
     color: red;
   }
   to {
-    color: #F4CA19;
+    color:#F4CA19;
     width: 10px;
     height: 10px;
   }
@@ -67,14 +67,14 @@ footer {
   float: none;
   position: fixed;
   margin-top: 30px;
-}
+ }
+
 
 @media (max-width: 600px) {
-  .divForFooter {
-    position: relative;
-    /* float: none; */
-    margin-left: auto;
-  }
+  .divForFooter  {
+         position: relative;
+         /* float: none; */
+margin-left: auto;  }
 }
 
 .container {
@@ -113,7 +113,6 @@ footer {
 
 .title {
   color: white;
-  margin-left: 70px;
 }
 
 .Btn:hover {
@@ -143,84 +142,75 @@ footer {
 .hrefLabelStyle {
   margin-left: 20px;
 }
-
 .userName {
+
   padding: 5px;
-  padding-left: 900px;
+  padding-left:900px;
+
 }
 
-.userName a:hover {
+.userName a:hover{
   color: #F4CA19;
+
 }
 
 .dropbtn {
-  background-color: #3B5998;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
+    background-color: #3B5998;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
 }
-
-.dropbtn:hover {
-  color: #F4CA19;
-}
+ .dropbtn:hover{color: #F4CA19;}
 
 .dropdown {
-  position: relative;
-  display: inline-block;
-  background-color: #3B5998;
-  margin-left: 1000px;
+    position: relative;
+    display: inline-block;
+    background-color: #3B5998;
+    margin-left: 1000px;
+
 }
 
 .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  overflow: auto;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
 }
 
 .dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
 }
 
-.dropdown a:hover {
-  background-color: #ddd
-}
+.dropdown a:hover {background-color: #ddd}
 
-.show {
-  display: block;
-}
+.show {display:block;}
 
 .marginForYou {
   display: block;
-  margin: 0 auto;
+  margin:0 auto;
 }
 
-.removeUnderline {
+.removeUnderline{
   text-decoration: none;
 }
 
-.left {
+.left{
   text-align: left;
 }
-
-.right {
-  text-align: right;
-  margin-top: -40px;
+.right{text-align: right;
+margin-top: -40px;
 }
 
-.welcomeInUserPage {
+.centeredTitle {
+  margin-top: 10px;
+  margin-bottom: 10px;
   text-align: center;
-  margin: 30px;
-}
-
-.userpageTitle {
-  font-size: 20px;
 }

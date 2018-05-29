@@ -14,20 +14,18 @@ exports.get = (req, res) => {
 
 
       select.selectCodes(jwtresult.id, (error, result) => {
+        console.log(result, 'rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr');
         if (error) return res.status(500);
         else {
-          const Code = result;
+
+          const code  = result;
           const name = jwtresult.username;
           res.render('userpage', {
-            Code,
+            code,
             name
           });
-        }
+         }
       })
-
-
-
-      
     }
   })
 }

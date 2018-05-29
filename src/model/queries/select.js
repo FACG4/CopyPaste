@@ -22,6 +22,28 @@ exports.selectCodes = (user_id, cb) => {
   })
 }
 
+// exports.selectHtmlCodes = (user_id, cb) => {
+//   const sql = {
+//     text: `SELECT html_code FROM codes WHERE user_id=($1)`,
+//     values: [user_id]
+//   };
+//   connection.query(sql, (err, result) => {
+//     if (err) return cb(err)
+//     cb(null, result.rows)
+//   })
+// }
+//
+// exports.selectCssCodes = (user_id, cb) => {
+//   const sql = {
+//     text: `SELECT css_code FROM codes WHERE user_id=($1)`,
+//     values: [user_id]
+//   };
+//   connection.query(sql, (err, result) => {
+//     if (err) return cb(err)
+//     cb(null, result.rows)
+//   })
+// }
+
 exports.selecAllIds = (cb) => {
   const sql = `SELECT id FROM users`;
   connection.query(sql, (err, result) => {
