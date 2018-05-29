@@ -27,8 +27,8 @@ p {
   background-color: #E9EFFC;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
+  overflow: hidden;
 }
-
 
 .nav-content {
   display: none;
@@ -42,9 +42,7 @@ p {
   padding: 15px 25px;
   font-weight: 600;
   text-align: center;
-   border: 1px solid transparent;
-  border-top-left-radius: 25px;
-
+  border: 1px solid transparent;
 }
 
 .navEditContainer .hidden {
@@ -57,11 +55,12 @@ p {
 }
 
 .navEditContainer .hidden label {
-     color: #3B5998;
+  color: #3B5998;
   border: 1px solid #ddd;
   border-bottom: 1px solid #fff;
   background-color: #E9EFFC;
 }
+
 .navEditContainer .hidden:checked+label {
   color: white;
   border: 1px solid #ddd;
@@ -69,24 +68,16 @@ p {
   background-color: #3B5998;
 }
 
-
-.font-editor{
+.font-editor {
   display: grid;
   grid-template-columns: auto;
 }
 
-.font-editor div label,
-.font-editor div select,
-.font-editor div input{
+.font-editor div label, .font-editor div select, .font-editor div input {
   width: 200px;
 }
 
-
-
-#Main:checked ~ #nav-main-details,
-#Color:checked ~ #nav-color-details,
-#Font:checked ~ #nav-font-details,
-#Hover:checked ~ #nav-hover-details{
+#Main:checked~#nav-main-details, #Color:checked~#nav-color-details, #Font:checked~#nav-font-details, #Hover:checked~#nav-hover-details {
   display: block;
 }
 
@@ -110,7 +101,7 @@ p {
   margin-left: 20px;
 }
 
-.newLinkHref, .newLinkTitle {
+.newLinkHref, .newLinkTitle, .color-input {
   height: 30px;
   border-radius: 3px;
   margin-left: 45px;
@@ -137,6 +128,7 @@ p {
   margin-left: 10px;
   padding: 5px;
 }
+
 .linksAddedToNavbar {
   height: 35px;
   border-radius: 16px;
@@ -180,7 +172,7 @@ p {
   padding-top: 45px;
 }
 
-.heightInputForNavbar{
+.heightInputForNavbar {
   height: 30px;
   border-radius: 3px;
   margin-left: 22px;
@@ -222,45 +214,52 @@ p {
   padding-left: 15px;
 }
 
-.cssCode{
+.cssCode {
   text-align: left;
   background-color: #E9EFFC;
   border-radius: 10px;
   width: 20%;
   height: auto;
   padding: 15px;
- float: left;
- margin-left: 330px;
-
+  float: left;
+  margin-left: 330px;
 }
 
-.htmlCode{
+.htmlCode {
   text-align: left;
   background-color: #E9EFFC;
   border-radius: 10px;
   width: 20%;
   height: auto;
   padding: 15px;
-float: right;
-margin-right: 330px;
+  float: right;
+  margin-right: 330px;
 }
 
-
-.backToEditing{
+.backToEditing {
   background-color: #EF5552;
   height: 30px;
   width: 60px;
   border-radius: 16px;
   color: white;
   float: left;
- }
+}
 
- .resultContainer{
-   display: none;
-   margin-top: 80px;
- }
+.copybtn {
+  background-color: #EF5552;
+  height: 30px;
+  width: 60px;
+  border-radius: 16px;
+  color: white;
+  float: left;
+}
 
- .preview {
+.resultContainer {
+  display: none;
+  margin-top: 80px;
+}
+
+.preview {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -281,6 +280,7 @@ li a {
   text-align: center;
   text-decoration: none;
 }
+
 .editBtn {
   background-color: #3B5998;
   color: white;
@@ -290,7 +290,8 @@ li a {
   font-weight: bold;
   margin-bottom: 30px;
 }
-#navbarLinks {
+
+#navbarLinks, .color-select, #font-style, #font-weight, #font-family {
   height: 35px;
   border-radius: 16px;
   background-color: #3B5998;
@@ -298,4 +299,11 @@ li a {
   width: 85px;
   margin-left: 41px;
   padding: 5px;
+}
+
+#nav-color-link-option {
+  margin-left: 141px;
+}
+#nav-color-active-link-option {
+  margin-left: 100px;
 }

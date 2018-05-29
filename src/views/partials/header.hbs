@@ -1,7 +1,34 @@
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <header>
   <img class="logo" src="images/papers.svg" alt="logo">
   <div class="head">
-    <h1><span class='yellow'>C</span>opy<span class='red'>P</span>aste</h1>
-    <h2>Get your code fast!</h2>
+
+    <h1 class='whiteColor'><span class='yellow'>C</span>opy<span class='red'>P</span>aste</h1>
+    <h2 class='whiteColor'>Get your code fast!</h2>
+
+    <div class="right">
+      {{#if name}}
+
+        <div class="dropdown">
+          <button onclick="myFunction()" class="dropbtn"><i class="fa">&#xf150;</i> {{capitalize name}}</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="/userpage">Signed as: {{capitalize name}}</a>
+            <a href="/logout">Logout</a>
+          </div>
+        </div>
+
+      {{else}}
+        <div class="userName">
+          <a href="/login" class="whiteColor">Log in </a> <span class="whiteColor">or</span>
+          <a href="/signup" class="whiteColor"> Sign up</a>
+        </div>
+
+      {{/if}}
+    </div>
+
   </div>
 </header>
+
+<script type="text/javascript" src="./js/header.js"></script>

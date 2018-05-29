@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/loginstyle.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="form">
+  <div class="tab-content">
+    <h1 class="Welcome">Sign Up for Free</h1>
+    <form action="/signup" method="post"><br>
+      <div class="field-wrap" id="formError">
+      </div>
+      <div class="field-wrap">
+        <div class="field-wrap">
+          <input class="loginInput" type="text" name="name" id="userName" required placeholder="Username..." />
+        </div>
+
+      </div>
+      <div class="field-wrap">
+        <input class="loginInput" name="email" id="email" type="email" required placeholder="Email" />
+      </div>
+
+      <div class="field-wrap">
+        <input class="loginInput" name="password" id="password" type="password" required placeholder="Password" />
+      </div>
+
+      <button class="loginButton" type="submit" id="formSubmit" class="button button-block" />Get Started</button>
+    </form>
+    <p class="forget">Aready have an account?<a href="login"> Login now!</a></p>
+  </div>
+</div>
+<script src="./js/domSignup.js"></script>
