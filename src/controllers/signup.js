@@ -53,7 +53,7 @@ else {
     if (hashError) res.status(500);
     insert.insertUser(name, email, hashedPassword, (error, result) => {
       if (error) {
-        return res.render('signup' , {errorMsg:'Email already exixts!'});
+        return res.render('signup' , {errorMsg:'Email already exist!'});
       } else {
         res.redirect('/login');
       }
