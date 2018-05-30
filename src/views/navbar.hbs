@@ -28,7 +28,9 @@
     <div class="nav-content" id="nav-main-details">
       <div class="navbarPositionContainer">
         <span class="label">Navbar height </span>
-        <input type="number" class="heightInputForNavbar" name="navHeight" id="navHeight"><br><br>
+        <input type="number" class="heightInputForNavbar" name="navHeight" id="navHeight">
+        <span>px</span>
+        <br><br>
         <span class="label">Fixed Positin</span>
         <input type="checkbox" class="navbarPosition" name="" value=""><br><br><br>
 
@@ -125,7 +127,7 @@
 
         <div>
           <label for="font-size">Font Size: </label>
-          <input id='font-size' type="range" min=".5" max="3" step=".1" name="font-size">
+          <input class="font-size" id='font-size' type="range" min=".5" max="3" step=".1" name="font-size">
           <span id="font-size-value">1.75 em</span>
         </div>
 
@@ -167,24 +169,42 @@
 </div>
 
 <section class="resultContainer">
-  <button type="button" name="Back" class="backToEditing" id="backToEditing"><i class="fas fa-angle-left"></i>Back</button>
+  <button type="button" name="Back" class="backToEditing" id="backToEditing"><i class="fas fa-angle-left"></i> Back</button>
 
   <div class="result">
 
     <div class="cssCode">
       <h3 style="text-align:center">CSS</h3>
-      <form action="/insertCssCode" method="post">
+<div id="cssMsg">
+
+</div>
+      <form  method="post">
         <textarea class="textarea" name="cssCodeList" id="cssCodeList" rows="20" cols="25"></textarea>
-        <input type="submit" value="Save" name="saveCssBtn" class="copybtn" title="Saved code will be added into your profile :)">
+        <!-- To make just logged users able to save codeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee -->
+
+        {{#if name}}
+          <input style="display:block" type="submit" value="Save" id="saveCssBtn" name="saveCssBtn" class="copybtn" title="Saved code will be added into your profile :)">
+        {{else}}
+          <input style="display:none" type="submit" value="Save" id="saveCssBtn" name="saveCssBtn" class="copybtn" title="Saved code will be added into your profile :)">
+        {{/if}}
       </form>
+
       <input type="button" value="Copy" name="copyCssBtn" class="copybtn" id='copyCssBtn'>
     </div>
 
     <div class="htmlCode">
       <h3 style="text-align:center">HTML</h3>
-      <form action="insertHtmlCode" method="post">
+      <div id="htmlMsg">
+
+      </div>
+      <form  id="form" method="post">
         <textarea class="textarea" name="htmlCodeList" id="htmlCodeList" rows="20" cols="25"></textarea>
-        <input type="submit" value="Save"  name="saveHtmlBtn" class="copybtn" title="Saved code will be added into your profile :)">
+        {{#if name }}
+          <input style="display:block" type="submit" value="Save" id="saveHtml" name="saveHtmlBtn" class="copybtn" title="Saved code will be added into your profile :)">
+        {{else}}
+          <input style="display:none" type="submit" value="Save" id="saveHtml" name="saveHtmlBtn" class="copybtn" title="Saved code will be added into your profile :)">
+        {{/if}}
+
       </form>
       <input type="button" value="Copy" class="copybtn" id='copyHtmlBtn'>
     </div>
@@ -197,3 +217,7 @@
 <script type="text/javascript" src="./js/fontEditor.js"></script>
 <script type="text/javascript" src="./js/hoverEditor.js"></script>
 <script type="text/javascript" src="./js/generator.js"></script>
+<script type="text/javascript" src="./js/insertCodeValidation.js"></script>
+<script type="text/javascript" src="./js/sendCodeDB.js">
+
+</script>

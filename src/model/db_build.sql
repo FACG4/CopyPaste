@@ -1,6 +1,6 @@
 BEGIN;
 
-DROP TABLE IF EXISTS users, codes CASCADE;
+DROP TABLE IF EXISTS users, CssCodes, HtmlCodes CASCADE;
 
 CREATE TABLE users(
   id SERIAL PRIMARY KEY,
@@ -11,13 +11,13 @@ CREATE TABLE users(
 
 CREATE TABLE CssCodes(
   id SERIAL PRIMARY KEY,
-   css_code text ,
+  css_code text NOT NULL,
   user_id INTEGER REFERENCES users(id)
 );
 
 CREATE TABLE HtmlCodes(
   id SERIAL PRIMARY KEY,
-   html_code text ,
+  html_code text NOT NULL,
   user_id INTEGER REFERENCES users(id)
 );
 

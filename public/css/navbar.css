@@ -179,7 +179,8 @@ p {
   padding-top: 45px;
 }
 
-.heightInputForNavbar{
+.heightInputForNavbar, .nav-hover-input-HEX, .nav-hover-input-RGB, .nav-color-input-HEX, .nav-color-input-RGB
+{
   height: 30px;
   border-radius: 3px;
   margin-left: 22px;
@@ -230,7 +231,6 @@ p {
   padding: 15px;
  float: left;
  margin-left: 330px;
- overflow-y: scroll;
 
 }
 
@@ -243,7 +243,6 @@ p {
   padding: 15px;
 float: right;
 margin-right: 330px;
-overflow-y: scroll;
 }
 
 
@@ -259,6 +258,7 @@ overflow-y: scroll;
  .resultContainer{
    display: none;
    margin-top: 80px;
+   margin-bottom: 120px;
  }
 
  .preview {
@@ -316,4 +316,7 @@ li a {
 }
 #nav-color-active-link-option {
   margin-left: 100px;
+}
+#htmlMsg, #cssMsg {
+color: green;
 }

@@ -2,8 +2,9 @@ const select = require('../model/queries/select');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const cookie = require('cookie');
-
+let referer;
 exports.get = (req, res) => {
+referer = req.headers.referer;
   if (!req.headers.cookie || !req.headers.cookie.includes('token')) {
     res.render('login');
   } else {
@@ -40,7 +41,7 @@ exports.post = (req, res) => {
             httpOnly: false
           });
           const name = cb[0].name;
-          res.redirect('/');
+          res.redirect(referer);
         } else {
           const msg = "Wrong password!";
           const error = true;

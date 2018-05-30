@@ -55,8 +55,8 @@ header, footer {
   }
   to {
     color:#F4CA19;
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
   }
 }
 
@@ -136,7 +136,7 @@ margin-left: auto;  }
 }
 
 .footerText {
-  padding-left: 560px
+  padding-left: 595px
 }
 
 .hrefLabelStyle {
@@ -216,15 +216,19 @@ margin-top: -40px;
 }
 
 
-li {
+.liElement {
     color: black;
     list-style-type: none;
 }
-li:nth-child(odd) {
+.liElement:nth-child(odd) {
     color: #777;
     background-color: #b3c2e2;
 }
-li:nth-child(even) {
+.liElement:nth-child(even) {
     color: #777;
     background-color: #dce4f7;
 }
+/* .liElement::after{
+   content: '\A';
+} */
+ br:before { content: "\A"; white-space: pre-line }

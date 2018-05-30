@@ -4,21 +4,40 @@
 <div class="form">
   <div class="tab-content">
     <h1 class="Welcome">Sign Up for Free</h1>
+    {{#if errorMsg}}
+    <h1>{{errorMsg}}</h1>
+{{/if}}
+
+
     <form action="/signup" method="post"><br>
       <div class="field-wrap" id="formError">
       </div>
       <div class="field-wrap">
         <div class="field-wrap">
-          <input class="loginInput" type="text" name="name" id="userName" required placeholder="Username..." />
+
+          {{#if name1}}
+          <input value="{{name1}}" class="loginInput" type="text" name="name" id="userName" required placeholder="Username..." />
+{{else}}
+<input class="loginInput" type="text" name="name" id="userName" required placeholder="Username..." />
+{{/if}}
         </div>
 
       </div>
       <div class="field-wrap">
-        <input class="loginInput" name="email" id="email" type="email" required placeholder="Email" />
+        {{#if email}}
+        <input value="{{email}}" class="loginInput" name="email" id="email" type="email" required placeholder="Email" />
+{{else}}
+<input class="loginInput" name="email" id="email" type="email" required placeholder="Email" />
+{{/if}}
       </div>
 
       <div class="field-wrap">
-        <input class="loginInput" name="password" id="password" type="password" required placeholder="Password" />
+
+        {{#if password}}
+        <input value={{password}} class="loginInput" name="password" id="password" type="password" required placeholder="Password" />
+{{else}}
+<input  class="loginInput" name="password" id="password" type="password" required placeholder="Password" />
+{{/if}}
       </div>
 
       <button class="loginButton" type="submit" id="formSubmit" class="button button-block" />Get Started</button>

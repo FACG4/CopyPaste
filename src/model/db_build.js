@@ -9,7 +9,7 @@ const dbConnect = (cb) => {
   });
 };
 dbConnect((err, result) => {
-  console.log('chat database has been initialized');
+  console.log('CopyPaste database has been initialized');
 });
 
 module.exports = dbConnect;
