@@ -21,7 +21,7 @@ linksAddedToNavbar.appendChild(firstOptionInlinksAddedToNavbar);
 innerMainSectionForNavbar.appendChild(linksAddedToNavbar);
 
 let newHrefInNavbar = '';
-let newLiElementInNavbar = '';
+  let newLiElementInNavbar = '';
 const addNewLinkBtn = select(".addNewLinkBtn");
 const navbarPositionContainer = select('.navbarPositionContainer')
 const navbarPosition = select(".navbarPosition");
@@ -107,7 +107,7 @@ addNewLinkBtn.addEventListener("click", function() {
 
     flag = true;
   } else if (flag === true) {
-    newLiElementInNavbar = create('li');
+      newLiElementInNavbar = create('li');
     newLiElementInNavbar.setAttribute('id', `newLiElementInNavbar-${counter}`)
     newLiElementInNavbar.setAttribute('class', `cp-list`);
     newHrefInNavbar = create('a');
