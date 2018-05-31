@@ -84,17 +84,15 @@ addNewLinkBtn.addEventListener("click", function() {
     innerMainSectionForNavbar.appendChild(activeLinkCheck)
     innerMainSectionForNavbar.appendChild(activeLinkCheckLable)
 
-    const option0 = create('option');
+
     const option1 = create('option');
     const option2 = create('option');
     floatInner.id = "floatInner";
-    option0.text = 'Float';
     option1.value = `left-${counter}`;
     option1.text = 'left';
     option1.selected=true;
     option2.value = `right-${counter}`;
     option2.text = 'right';
-    floatInner.appendChild(option0);
     floatInner.appendChild(option1);
     floatInner.appendChild(option2);
 
@@ -178,15 +176,13 @@ linksAddedToNavbar.onchange = function(e) {
   editLinksDiv.appendChild(editFloat);
   editLinksDiv.appendChild(editButton);
 
-  const option00 = create('option');
+
   const option01 = create('option');
   const option02 = create('option');
-  option00.text = 'Float';
   option01.value = `left`;
   option01.text = 'left';
   option02.value = `right`;
   option02.text = 'right';
-  editFloat.appendChild(option00);
   editFloat.appendChild(option01);
   editFloat.appendChild(option02);
 

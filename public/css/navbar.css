@@ -27,6 +27,7 @@ p {
   background-color: #E9EFFC;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
+  overflow: hidden;
 }
 
 
@@ -43,8 +44,6 @@ p {
   font-weight: 600;
   text-align: center;
    border: 1px solid transparent;
-  border-top-left-radius: 25px;
-
 }
 
 .navEditContainer .hidden {
@@ -69,22 +68,16 @@ p {
   background-color: #3B5998;
 }
 
+
+.font-editor{
+  display: grid;
+  grid-template-columns: auto;
+}
+
 .font-editor div label,
 .font-editor div select,
-.font-editor div input {
+.font-editor div input{
   width: 200px;
-}
-.color-editor div label{
-  width: 15rem;
-}
-.color-editor div select{
-  width: 6rem;
-}
-.color-editor div input{
-  font-size: 18px;
-  text-align: center;
-  margin-left: 10px;
-  width: 8rem;
 }
 
 
@@ -186,7 +179,8 @@ p {
   padding-top: 45px;
 }
 
-.heightInputForNavbar{
+.heightInputForNavbar, .nav-hover-input-HEX, .nav-hover-input-RGB, .nav-color-input-HEX, .nav-color-input-RGB
+{
   height: 30px;
   border-radius: 3px;
   margin-left: 22px;
@@ -228,28 +222,28 @@ p {
   padding-left: 15px;
 }
 
-.cssCode ,.htmlCode{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.cssCode{
   text-align: left;
-  justify-content: space-around;
   background-color: #E9EFFC;
   border-radius: 10px;
-width: 30%;
-margin: 50px;
-height: 250px;
-}
-textarea{
-  width: 80%;
-  height: 150px;
+  width: 20%;
+   height: 400px;
+  padding: 15px;
+ float: left;
+ margin-left: 330px;
+
 }
 
-.finalCssCode{
-  max-height: 200px;
-  overflow: auto;
+.htmlCode{
+  text-align: left;
+  background-color: #E9EFFC;
+  border-radius: 10px;
+  width: 20%;
+  height: 400px;
+  padding: 15px;
+float: right;
+margin-right: 330px;
 }
-
 
 
 .backToEditing, .copybtn{
@@ -263,17 +257,10 @@ textarea{
 
  .resultContainer{
    display: none;
-   flex-direction: column;
-  justify-content: center;
-  height: 70%;
-  flex-wrap:wrap;
-
+   margin-top: 80px;
+   margin-bottom: 120px;
  }
-.result{
-  display: flex;
-     justify-content: center;
-     /* padding: 200px; */
-}
+
  .preview {
   list-style-type: none;
   margin: 0;
@@ -284,7 +271,17 @@ textarea{
   margin-bottom: 50px;
 }
 
+li {
+  float: left;
+  text-align: center;
+}
 
+li a {
+  display: block;
+  color: #666;
+  text-align: center;
+  text-decoration: none;
+}
 .editBtn {
   background-color: #3B5998;
   color: white;
@@ -293,7 +290,6 @@ textarea{
   width: 70px;
   font-weight: bold;
   margin-bottom: 30px;
-
 }
 #navbarLinks {
   height: 35px;
@@ -303,4 +299,24 @@ textarea{
   width: 85px;
   margin-left: 41px;
   padding: 5px;
+}
+
+#navbarLinks, .color-select, #font-style, #font-weight, #font-family {
+  height: 35px;
+  border-radius: 16px;
+  background-color: #3B5998;
+  color: white;
+  width: 85px;
+  margin-left: 41px;
+  padding: 5px;
+}
+
+#nav-color-link-option {
+  margin-left: 141px;
+}
+#nav-color-active-link-option {
+  margin-left: 100px;
+}
+#htmlMsg, #cssMsg {
+color: green;
 }
