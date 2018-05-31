@@ -1,5 +1,6 @@
-# CopyPaste
+# CopyPaste :pencil: 
 
+## Our Idea :sparkles: :sparkles:
 
 ### Problem Statement:
 
@@ -11,7 +12,7 @@ Customizable front-end template for building fast, robust, and adaptable web app
 
 
 
-### User Stories:
+## User Stories :sparkles: :sparkles:
 
 * As a web developer, I need an easy way to generate code for navbar.
 * As a web developer, I need an easy way to generate code for login page.
@@ -20,11 +21,11 @@ Customizable front-end template for building fast, robust, and adaptable web app
 
 
 
-### Link for prototype:
+## Link for prototype:
 
 https://www.figma.com/proto/VWxnVmZPLNuL8k3TwiQOvuli/CopyPaste?node-id=106%3A0&scaling=contain
 
 
-### Tech Stack:
+## Tech Stack:
 
 `html` `css` `javaScript` `Express framework` `Node.js` `PostgreSQL`
