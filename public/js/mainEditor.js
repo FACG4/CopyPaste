@@ -18,15 +18,16 @@ linksAddedToNavbar.setAttribute('id', 'navbarLinks')
 const firstOptionInlinksAddedToNavbar = create('option');
 firstOptionInlinksAddedToNavbar.text = 'Edit Link';
 linksAddedToNavbar.appendChild(firstOptionInlinksAddedToNavbar);
-innerMainSectionForNavbar.appendChild(linksAddedToNavbar);
+const navMainDetails = select('#nav-main-details');
+navMainDetails.appendChild(linksAddedToNavbar);
 
 let newHrefInNavbar = '';
-  let newLiElementInNavbar = '';
+let newLiElementInNavbar = '';
 const addNewLinkBtn = select(".addNewLinkBtn");
 const navbarPositionContainer = select('.navbarPositionContainer')
 const navbarPosition = select(".navbarPosition");
 const navbarPreview = select(".cp-navbar-container");
-const paddingInputForNavbar = select('.paddingInputForNavbar')
+const navHeight = select('#navHeight')
 const generateCode = select('.generateCodeButton');
 const cpNavbarFixHolder = select('#cp-navbar-fix-holder');
 const backToEditing = select('.backToEditing');
@@ -35,9 +36,10 @@ const navPreview = select('.navPreview');
 const resultContainer = select('.resultContainer');
 const navbarHeight = select('.navbarHeight');
 const GenerateCodeDiv = select('.GenerateCodeDiv');
+let activeLinkCheck
+let activeLinkCheckLable
 
 
-paddingInputForNavbar.setAttribute('class', 'newLinkTitle')
 
 let counter = 1;
 let flag = false;
@@ -47,20 +49,6 @@ let floatInner;
 let floatLabel;
 let defaultPositionForNavbar = "static";
 
-
-navbarPosition.addEventListener('change', function() {
-  if (!this.checked) {
-    defaultPositionForNavbar = "fixed";
-  }
-})
-
-
-paddingInputForNavbar.addEventListener('input', function() {
-  document.querySelectorAll('li').forEach(function(e) {
-    navbarPreview.style.padding = paddingInputForNavbar.value + 'px';
-    e.style.padding = paddingInputForNavbar.value + 'px';
-  })
-})
 
 
 addNewLinkBtn.addEventListener("click", function() {
@@ -73,6 +61,10 @@ addNewLinkBtn.addEventListener("click", function() {
     newLinkHref = create('input');
     floatInner = create('select');
     floatLabel = create('span');
+     activeLinkCheck=create('input')
+     activeLinkCheckLable=create('lable')
+     activeLinkCheck.setAttribute('type','checkbox')
+     activeLinkCheckLable.textContent='Active Link'
 
 
     newLinkTitle.setAttribute('class', 'newLinkTitle');
@@ -85,32 +77,35 @@ addNewLinkBtn.addEventListener("click", function() {
     floatInner.setAttribute('class', 'floatInner');
     newLinkHref.setAttribute('id', `newLinkHref-${counter}`);
     floatLabel.textContent='Float';
-
     innerMainSectionForNavbar.appendChild(newLinkTitle);
     innerMainSectionForNavbar.appendChild(newLinkHref);
     innerMainSectionForNavbar.appendChild(floatLabel);
     innerMainSectionForNavbar.appendChild(floatInner);
+    innerMainSectionForNavbar.appendChild(activeLinkCheck)
+    innerMainSectionForNavbar.appendChild(activeLinkCheckLable)
 
-    const option0 = create('option');
+
     const option1 = create('option');
     const option2 = create('option');
     floatInner.id = "floatInner";
-    option0.text = 'Float';
     option1.value = `left-${counter}`;
     option1.text = 'left';
     option1.selected=true;
     option2.value = `right-${counter}`;
     option2.text = 'right';
-    floatInner.appendChild(option0);
     floatInner.appendChild(option1);
     floatInner.appendChild(option2);
 
+
     flag = true;
-  } else if (flag === true) {
-      newLiElementInNavbar = create('li');
+  } else if (flag === true&&newLinkTitle.value.length>0) {
+    newLiElementInNavbar = create('li');
     newLiElementInNavbar.setAttribute('id', `newLiElementInNavbar-${counter}`)
     newLiElementInNavbar.setAttribute('class', `cp-list`);
     newHrefInNavbar = create('a');
+    if (activeLinkCheck.checked) {
+      newHrefInNavbar.classList.add('active')
+    }
     navbarPreview.appendChild(newLiElementInNavbar);
     newLiElementInNavbar.appendChild(newHrefInNavbar);
     newHrefInNavbar.textContent = newLinkTitle.value;
@@ -140,30 +135,14 @@ addNewLinkBtn.addEventListener("click", function() {
     innerMainSectionForNavbar.removeChild(newLinkHref);
     innerMainSectionForNavbar.removeChild(floatLabel);
     innerMainSectionForNavbar.removeChild(floatInner);
+     innerMainSectionForNavbar.removeChild(activeLinkCheck)
+     innerMainSectionForNavbar.removeChild(activeLinkCheckLable)
 
     flag = false;
     counter++;
   }
 });
 
-
-
-// generate code button >>>>>>>>>>>>>>>>>>>>
-generateCode.addEventListener('click', function(){
-  navEditContainer.style.display = 'none';
-  navPreview.style.display = 'none';
-  GenerateCodeDiv.style.display = 'none';
-  resultContainer.style.display = 'block';
-  backToEditing.style.display = 'block';
-})
-
-backToEditing.addEventListener('click' , function(){
-  navEditContainer.style.display = 'block';
-  navPreview.style.display = 'block';
-  GenerateCodeDiv.style.display = 'block';
-  resultContainer.style.display = 'none';
-  backToEditing.style.display = 'none';
-})
 
 
 
@@ -197,22 +176,37 @@ linksAddedToNavbar.onchange = function(e) {
   editLinksDiv.appendChild(editFloat);
   editLinksDiv.appendChild(editButton);
 
-  const option00 = create('option');
+
   const option01 = create('option');
   const option02 = create('option');
-  option00.text = 'Float';
   option01.value = `left`;
   option01.text = 'left';
   option02.value = `right`;
   option02.text = 'right';
-  editFloat.appendChild(option00);
   editFloat.appendChild(option01);
   editFloat.appendChild(option02);
 
+  activeLinkCheck=create('input')
+  activeLinkCheckLable=create('lable')
+  activeLinkCheck.setAttribute('type','checkbox')
+  activeLinkCheckLable.textContent='Active Link'
+
+  editLinksDiv.appendChild(activeLinkCheck)
+
+  editLinksDiv.appendChild(activeLinkCheckLable)
+  if (document.getElementById(`newLiElementInNavbar-${e.target.selectedIndex}`).getElementsByTagName('a')[0].classList.contains('active')) {
+    activeLinkCheck.checked=true
+  }
   editButton.addEventListener('click', function() {
     if (!editFlag) {
       document.getElementById(`newLiElementInNavbar-${e.target.selectedIndex}`).getElementsByTagName('a')[0].textContent = editTextInput.value;
       document.getElementById(`newLiElementInNavbar-${e.target.selectedIndex}`).getElementsByTagName('a')[0].href = editLinkInput.value;
+      if (activeLinkCheck.checked) {
+        document.getElementById(`newLiElementInNavbar-${e.target.selectedIndex}`).getElementsByTagName('a')[0].classList.add('active')
+      }else{
+        document.getElementById(`newLiElementInNavbar-${e.target.selectedIndex}`).getElementsByTagName('a')[0].classList.remove('active')
+
+      }
       if (editFloat.value === 'left') {
         navbarPreview.insertBefore(document.getElementById(`newLiElementInNavbar-${e.target.selectedIndex}`), cpNavbarFixHolder);
       }
@@ -228,9 +222,14 @@ linksAddedToNavbar.onchange = function(e) {
       editLinksDiv.removeChild(editLinkInput);
       editLinksDiv.removeChild(editButton);
       editLinksDiv.removeChild(editFloat);
+      editLinksDiv.removeChild(activeLinkCheck)
+      editLinksDiv.removeChild(activeLinkCheckLable)
+
       editFlag = false;
     }
   })
 
-
 }
+navHeight.addEventListener('input',function(e){
+navbarPreview.style.height=this.value+'px'
+})

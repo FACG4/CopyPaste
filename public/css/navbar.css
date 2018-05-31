@@ -27,6 +27,7 @@ p {
   background-color: #E9EFFC;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
+  overflow: hidden;
 }
 
 
@@ -43,8 +44,6 @@ p {
   font-weight: 600;
   text-align: center;
    border: 1px solid transparent;
-  border-top-left-radius: 25px;
-
 }
 
 .navEditContainer .hidden {
@@ -180,7 +179,8 @@ p {
   padding-top: 45px;
 }
 
-.heightInputForNavbar{
+.heightInputForNavbar, .nav-hover-input-HEX, .nav-hover-input-RGB, .nav-color-input-HEX, .nav-color-input-RGB
+{
   height: 30px;
   border-radius: 3px;
   margin-left: 22px;
@@ -202,7 +202,6 @@ p {
   width: 200px;
   font-weight: bold;
   margin: 0 auto;
-
 }
 
 .generateCodeButton:hover {
@@ -228,10 +227,10 @@ p {
   background-color: #E9EFFC;
   border-radius: 10px;
   width: 20%;
-  height: auto;
+   height: 400px;
   padding: 15px;
-  float: left;
-  margin-left: 330px;
+ float: left;
+ margin-left: 330px;
 
 }
 
@@ -240,14 +239,14 @@ p {
   background-color: #E9EFFC;
   border-radius: 10px;
   width: 20%;
-  height: auto;
+  height: 400px;
   padding: 15px;
 float: right;
 margin-right: 330px;
 }
 
 
-.backToEditing{
+.backToEditing, .copybtn{
   background-color: #EF5552;
   height: 30px;
   width: 60px;
@@ -259,6 +258,7 @@ margin-right: 330px;
  .resultContainer{
    display: none;
    margin-top: 80px;
+   margin-bottom: 120px;
  }
 
  .preview {
@@ -299,4 +299,24 @@ li a {
   width: 85px;
   margin-left: 41px;
   padding: 5px;
+}
+
+#navbarLinks, .color-select, #font-style, #font-weight, #font-family {
+  height: 35px;
+  border-radius: 16px;
+  background-color: #3B5998;
+  color: white;
+  width: 85px;
+  margin-left: 41px;
+  padding: 5px;
+}
+
+#nav-color-link-option {
+  margin-left: 141px;
+}
+#nav-color-active-link-option {
+  margin-left: 100px;
+}
+#htmlMsg, #cssMsg {
+color: green;
 }
