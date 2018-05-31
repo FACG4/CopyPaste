@@ -125,3 +125,6 @@ footer{
 .hrefLabelStyle {
   margin-left: 20px;
 }
+.redBorder{
+  border-color: red;
+}

@@ -1,0 +1,215 @@
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100vh;
+}
+
+body {
+  color: #555;
+}
+
+.allSections{
+  display: flex;
+justify-content: space-between;
+margin-bottom: 100px;
+padding: 10px;
+}
+
+.login-content{
+  display: none;
+  margin-top: 30px;
+
+}
+#Main:checked ~ #login-main-details,
+#Color:checked ~ #login-colors-details,
+#size:checked ~ #login-size-details,
+#Font:checked ~ #login-fonts-details,
+#spaces:checked ~ #login-spaces-details{
+    display: block;
+}
+.addNew,.editBtn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 20px;
+  background-color: #3B5998;
+  color: white;
+  margin-left: 14px;
+}
+
+.loginEditContainer{
+  width: 50%;
+  min-width: 500px;
+  max-width: 700px;
+  padding: 0px;
+  margin: 30px auto;
+  height: max-content;
+  background-color: #E9EFFC;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+.loginEditContainer .hidden {
+  display: none;
+}
+
+.loginEditContainer label {
+  display: inline-block;
+  margin: 0 0 -1px;
+  padding: 15px 25px;
+  font-weight: 600;
+  text-align: center;
+   border: 1px solid transparent;
+  border-top-left-radius: 25px;
+
+}
+.loginEditContainer .hidden label {
+     color: #3B5998;
+  border: 1px solid #ddd;
+  border-bottom: 1px solid #fff;
+  background-color: #E9EFFC;
+}
+
+.loginEditContainer .hidden:checked+label {
+  color: white;
+  border: 1px solid #ddd;
+  border-bottom: 1px solid #fff;
+  background-color: #3B5998;
+}
+
+.login-content >label,.addInputDiv label,.editInputDiv label, .addLinkDiv label,.editLinkDiv label{
+  width: 50%;
+}
+.submit{
+background-color: #EF5552;
+border: none;
+width: 150px;
+height: 30px;
+color: white;
+text-align: center;
+text-decoration: none;
+font-size: 16px;
+cursor: pointer;
+margin: 0 auto;
+ display: block;
+ border-radius: 20px;
+ margin-bottom: 30px;
+}
+.color-editor div label{
+  width: 15rem;
+}
+.color-editor div input{
+  width: 6rem;
+  height: 1rem;
+}
+.color-editor div select{
+  width: 6rem;
+  height: 1rem;
+  margin-right: 10px;
+}
+.color-editor div{
+  display: flex;
+  align-items: center;
+
+}
+
+.loginEditContainer label:hover {
+  color: #3B5998;
+  cursor: pointer;
+}
+.addNew:hover,.editBtn:hover {
+  background-color: #EF5552;
+  color: white;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+#addInputDiv{
+display: none;
+}
+
+
+.addBtnDiv,.editBtnDiv ,.editLinkBtnDiv{
+  margin-bottom: 10px;
+  display: inline-block;
+}
+.btnDivCont{
+  text-align: center;
+}
+
+.loginPreview{
+  width: 40%;
+}
+.previewCss{
+  width:100%;
+  padding: 25px;
+}
+.LoginFormContainer{
+  width: 100%;
+  height: 100%;
+}
+
+.generateCodeButton {
+  background-color: #EF5552;
+  color: white;
+  border-radius: 16px;
+  height: 35px;
+  width: 200px;
+  font-weight: bold;
+  margin: 30px auto;
+}
+
+.generateCodeButton:hover {
+  background-color: #F4CA19;
+  color: #3B5998;
+}
+.GenerateCodeDiv{
+  text-align: center;
+}
+
+.cssCode ,.htmlCode{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  justify-content: space-around;
+  background-color: #E9EFFC;
+  border-radius: 10px;
+width: 30%;
+margin: 50px;
+height: 250px;
+}
+textarea{
+  width: 80%;
+  height: 150px;
+}
+
+.finalCssCode{
+  max-height: 200px;
+  overflow: auto;
+}
+
+
+
+.backToEditing, .copybtn{
+  background-color: #EF5552;
+  height: 30px;
+  width: 60px;
+  border-radius: 16px;
+  color: white;
+  float: left;
+ }
+
+ .resultContainer{
+   display: none;
+   flex-direction: column;
+  justify-content: center;
+  height: 70%;
+  flex-wrap:wrap;
+
+ }
+.result{
+  display: flex;
+     justify-content: center;
+}

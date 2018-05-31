@@ -272,7 +272,6 @@ textarea{
 .result{
   display: flex;
      justify-content: center;
-     /* padding: 200px; */
 }
  .preview {
   list-style-type: none;
