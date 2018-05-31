@@ -1,13 +1,15 @@
 # CopyPaste
 
 
+### Problem Statement:
+
+Wasting time on repetitive `html` and `css` code for web developers every time they are building a new web app.
+
 ### Description of the App:
 
 Customizable front-end template for building fast, robust, and adaptable web apps or sites,it generates code for styled components, so developers can spend more time developing and less time styling.
 
-### Problem Statement:
 
-Wasting time on repetitive `html` and `css` code for web developers every time they are building a new web app.
 
 ### User Stories:
 
@@ -25,4 +27,4 @@ https://www.figma.com/proto/VWxnVmZPLNuL8k3TwiQOvuli/CopyPaste?node-id=106%3A0&s
 
 ### Tech Stack:
 
-`html` `css` `javaScript`
+`html` `css` `javaScript` `Express framework` `Node.js` `PostgreSQL`

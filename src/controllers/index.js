@@ -8,10 +8,12 @@ const userpage = require('./userpage');
 const logout = require('./logout');
 const error = require('./error');
 const insert_codes = require('./insert_codes');
+const loginComponent = require('./loginComponent');
 
 router.get('/', home.get);
 
 router.get('/navbar', navbar.get);
+router.get('/loginComponent', loginComponent.get);
 
 router.get('/signup', signup.get);
 router.post('/signup', signup.post);

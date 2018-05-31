@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/login.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <header>
@@ -11,10 +12,10 @@
     <div class="right">
       {{#if name}}
 
-        <div  class="dropdown">
-          <button onmouseover="myFunction()"  class="dropbtn"><i class="fa">&#xf150;</i> {{capitalize name}}</button>
+        <div  class="dropdown" >
+          <button class="dropbtn" onmouseover="myFunction()"><i onmouseover="myFunction()" class="fa">&#xf150;</i> {{capitalize name}}</button>
           <div id="myDropdown" class="dropdown-content">
-            <a >Signed as: {{capitalize name}}</a>
+            <a>Signed as: {{capitalize name}}</a>
             <hr>
             <a href="/userpage">Your profile</a>
             <a href="/">Home</a>

@@ -30,7 +30,6 @@ p {
   overflow: hidden;
 }
 
-
 .nav-content {
   display: none;
   padding: 20px 0 0;
@@ -43,7 +42,7 @@ p {
   padding: 15px 25px;
   font-weight: 600;
   text-align: center;
-   border: 1px solid transparent;
+  border: 1px solid transparent;
 }
 
 .navEditContainer .hidden {
@@ -56,11 +55,12 @@ p {
 }
 
 .navEditContainer .hidden label {
-     color: #3B5998;
+  color: #3B5998;
   border: 1px solid #ddd;
   border-bottom: 1px solid #fff;
   background-color: #E9EFFC;
 }
+
 .navEditContainer .hidden:checked+label {
   color: white;
   border: 1px solid #ddd;
@@ -68,24 +68,16 @@ p {
   background-color: #3B5998;
 }
 
-
-.font-editor{
+.font-editor {
   display: grid;
   grid-template-columns: auto;
 }
 
-.font-editor div label,
-.font-editor div select,
-.font-editor div input{
+.font-editor div label, .font-editor div select, .font-editor div input {
   width: 200px;
 }
 
-
-
-#Main:checked ~ #nav-main-details,
-#Color:checked ~ #nav-color-details,
-#Font:checked ~ #nav-font-details,
-#Hover:checked ~ #nav-hover-details{
+#Main:checked~#nav-main-details, #Color:checked~#nav-color-details, #Font:checked~#nav-font-details, #Hover:checked~#nav-hover-details {
   display: block;
 }
 
@@ -136,6 +128,7 @@ p {
   margin-left: 10px;
   padding: 5px;
 }
+
 .linksAddedToNavbar {
   height: 35px;
   border-radius: 16px;
@@ -179,8 +172,7 @@ p {
   padding-top: 45px;
 }
 
-.heightInputForNavbar, .nav-hover-input-HEX, .nav-hover-input-RGB, .nav-color-input-HEX, .nav-color-input-RGB
-{
+.heightInputForNavbar, .nav-hover-input-HEX, .nav-hover-input-RGB, .nav-color-input-HEX, .nav-color-input-RGB {
   height: 30px;
   border-radius: 3px;
   margin-left: 22px;
@@ -222,46 +214,52 @@ p {
   padding-left: 15px;
 }
 
-.cssCode{
-  text-align: left;
-  background-color: #E9EFFC;
-  border-radius: 10px;
-  width: 20%;
-   height: 400px;
-  padding: 15px;
- float: left;
- margin-left: 330px;
-
-}
-
-.htmlCode{
+.cssCode {
   text-align: left;
   background-color: #E9EFFC;
   border-radius: 10px;
   width: 20%;
   height: 400px;
   padding: 15px;
-float: right;
-margin-right: 330px;
+  float: left;
+  margin-left: 330px;
+  max-height: none;
 }
 
+.htmlCode {
+  text-align: left;
+  background-color: #E9EFFC;
+  border-radius: 10px;
+  width: 20%;
+  height: 400px;
+  padding: 15px;
+  float: right;
+  margin-right: 330px;
+  max-width: 20%;
 
-.backToEditing, .copybtn{
+  height:auto;
+
+/* height:auto !important;        /* for IE as it does not support min-height */ */
+overflow: scroll;
+margin-bottom: 100px;
+}
+
+.backToEditing, .copybtn {
   background-color: #EF5552;
   height: 30px;
   width: 60px;
   border-radius: 16px;
   color: white;
   float: left;
- }
+}
 
- .resultContainer{
-   display: none;
-   margin-top: 80px;
-   margin-bottom: 120px;
- }
+.resultContainer {
+  display: none;
+  margin-top: 80px;
+  margin-bottom: 120px;
+}
 
- .preview {
+.preview {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -282,6 +280,7 @@ li a {
   text-align: center;
   text-decoration: none;
 }
+
 .editBtn {
   background-color: #3B5998;
   color: white;
@@ -291,6 +290,7 @@ li a {
   font-weight: bold;
   margin-bottom: 30px;
 }
+
 #navbarLinks {
   height: 35px;
   border-radius: 16px;
@@ -308,15 +308,17 @@ li a {
   color: white;
   width: 85px;
   margin-left: 41px;
-  padding: 5px;
+  /* padding: 5px; */
 }
 
 #nav-color-link-option {
   margin-left: 141px;
 }
+
 #nav-color-active-link-option {
   margin-left: 100px;
 }
+
 #htmlMsg, #cssMsg {
-color: green;
+  color: green;
 }
