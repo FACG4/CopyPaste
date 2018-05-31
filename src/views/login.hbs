@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="css/loginstyle.css">
+<div id="login" class="login">
+  <h1 class="Welcome">Login Now!</h1>
+  <form action="/login" method="post">
+
+    {{#if error}}
+      <div class="field-wrap" id="formError">
+        {{msg}}
+      </div>
+    {{/if}}
+    <div class="">
+      <input class="loginInput" name="email" type="email" placeholder="Enter your email.." required />
+    </div>
+    <br>
+    <div class="">
+      <input class="loginInput" placeholder="Enter your password..." name="password" type="password" required />
+    </div>
+    </br>
+    </br>
+    <button class="loginButton" />Log In</button>
+  </form>
+  </br>
+  </br>
+  <p class="forget">Don't have account?<a href="signup"> Sign up now!</a></p>
+</div>
+<br><br>

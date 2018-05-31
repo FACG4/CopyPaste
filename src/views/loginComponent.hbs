@@ -1,0 +1,533 @@
+
+<div class="allSectionsLogin">
+
+  <section class="loginEditContainer ">
+    <!-- <div class="lables"> -->
+
+    <input class="hidden" id="Main" type="radio" name="tabs" checked>
+    <label for="Main">Main</label>
+    <input class="hidden" id="Color" type="radio" name="tabs">
+    <label for="Color">Colors</label>
+    <input class="hidden" id="size" type="radio" name="tabs">
+    <label for="size">Size</label>
+    <input class="hidden" id="Font" type="radio" name="tabs">
+    <label for="Font">Font</label>
+    <input class="hidden" id="spaces" type="radio" name="tabs">
+    <label for="spaces">Spaces</label>
+
+
+
+
+    <div class="login-content login-main-details " id="login-main-details">
+      <label for="loginFormTiltleInput">Login Form Title :</label>
+      <input type="text" id="loginFormTiltleInput" value="Form Title">
+      <label for="loginFormActionInput">Login Form Action :</label>
+      <input type="text" id="loginFormActionInput" value="/login">
+<div class="btnDivCont">
+
+      <div class="addBtnDiv">
+        <input type="button"  id="addNewInput" value="+" class="addNew">
+        <label for="addNewInput">Add Input</label>
+      </div>
+      <div class="editBtnDiv">
+
+        <input type="button"  id="editInput" value="+" class="editBtn" >
+        <label for="editInput">Edit Inputs   <i class="fas fa-pencil-alt"></i></label>
+      </div>
+
+    </div>
+
+
+
+
+      <div class="addInputDiv" id="addInputDiv" style="display:none">
+          <label for="inputTitleInput">Input Title : </label>
+          <input type="text" id="inputTitleInput">
+          <label for="inputTypeSelect">Input Type: </label>
+          <select class="select" name="" id="inputTypeSelect">
+
+            <option value="Email">Email</option>
+            <option value="Text">Text</option>
+            <option value="Password">Password</option>
+            <option value="Number">Number</option>
+
+          </select>
+
+          <label for="inputNameInput">Input name : </label>
+          <input type="text" id="inputNameInput" >
+
+          <label for="inputPlaceholderInput">Input Placeholder : </label>
+          <input type="text" id="inputPlaceholderInput" >
+          <input type="button" value="Add Input" id="addInputButton" class="submit">
+      </div>
+
+
+      <div class="editInputDiv" id="editInputDiv" style="display:none">
+        <label for="editInputSelect" >Editing Target</label>
+        <select class="select" id="editInputSelect" style="display:none">
+          <option value="0">Email</option>
+          <option value="1">Password</option>
+        </select>
+        <label for="editInputTitleInput">Input Title : </label>
+        <input type="text" id="editInputTitleInput">
+        <label for="EditInputTypeSelect">Input Type: </label>
+        <select class="select" name="" id="EditInputTypeSelect">
+
+          <option value="Email">Email</option>
+          <option value="Text">Text</option>
+          <option value="Password">Password</option>
+          <option value="Number">Number</option>
+
+        </select>
+
+        <label for="editInputNameInput">Input name : </label>
+        <input type="text" id="editInputNameInput" >
+
+        <label for="editInputPlaceholderInput">Input Placeholder : </label>
+        <input type="text" id="editInputPlaceholderInput" >
+        <input type="button" value="Update Input" id="editInputButton" class="submit">
+      </div>
+
+
+
+      <div class="btnDivCont">
+      <div class="addBtnDiv">
+        <input type="button"  id="addNewLink" value="+" class="addNew">
+        <label for="addNewInput">Add Link</label>
+      </div>
+
+      <div class="editLinkBtnDiv">
+        <input type="button"  id="editLinkBtn" value="+" class="editBtn">
+        <label for="editLinkBtn">Edit Link   <i class="fas fa-pencil-alt"></i></label>
+      </div>
+      </div>
+
+
+      <div class="addLinkDiv" id="addLinkDiv"style="display:none">
+        <label for="linkTitleInput"> Link Title : </label>
+        <input type="text" id="linkTitleInput" >
+        <label for="linkHrefInput"> Link href : </label>
+        <input type="text" id="linkHrefInput">
+        <input type="button" value="Add Link" id="addLinkButton" class="submit">
+
+      </div>
+
+
+
+
+      <div class="editLinkDiv" id="editLinkDiv"style="display:none">
+        <label for="editLinkSelect">Editing Target</label>
+        <select class="select" id="editLinkSelect" style="display:none">
+          <option value="cp-link-0">Forget Password ?</option>
+
+        </select>
+        <label for="editLinkTitleInput"> Link Title : </label>
+        <input type="text" id="editLinkTitleInput" >
+        <label for="editLinkHrefInput"> Link href : </label>
+        <input type="text" id="editLinkHrefInput">
+        <input type="button" value="Edit Link" id="editLinkButton" class="submit">
+
+      </div>
+
+
+
+
+
+
+
+
+      </div>
+    <div class="login-content login-colors-details " id="login-colors-details">
+
+
+      <div class="color-editor-login">
+        <div class="row login-color-background-div" id="login-color-background-div">
+          <label for="FormBackground-color-option">login Form Background Color</label>
+
+          <select class="color-select" id="FormBackground-color-option">
+          <option value="login-color-input-HEX-FormBackground-color" > Hex</option>
+          <option value="login-color-input-RGB-FormBackground-color"> RGB</option>
+          <option value="login-color-input-inputColor-FormBackground-color" > Input-Color</option>
+          </select>
+
+          <input type="text" maxlength = "6" class="color-input  login-color-input-HEX " id="login-color-input-HEX-FormBackground-color" value="ecf0f1">
+            <input type="text" class="color-input  login-color-input-RGB " id="login-color-input-RGB-FormBackground-color" placeholder="125,85,200">
+          <input type="color" class="color-input  login-color-input-color " id="login-color-input-inputColor-FormBackground-color"value="#ecf0f1" >
+      </div>
+
+      <div class="row" id="login-color-form-border-option">
+        <label for="login-color-form-border-option">Form border Color</label>
+        <select class="color-select" id="login-color-form-border-option">
+          <option value="login-color-input-HEX-formBorder-color"> Hex</option>
+          <option value="login-color-input-RGB-formBorder-color"> RGB</option>
+          <option value="login-color-input-inputColor-formBorder-color"> Input-Color</option>
+        </select>
+        <input type="text" maxlength = "6" class="color-input  login-color-input-HEX " id="login-color-input-HEX-formBorder-color"  placeholder="none">
+        <input type="text" class="color-input  login-color-input-RGB " id="login-color-input-RGB-formBorder-color" placeholder="125,85,200">
+        <input type="color" class="color-input  login-color-input-color " id="login-color-input-inputColor-formBorder-color" value="#ffffff">
+
+      </div>
+
+
+      <div class="row" id="login-color-form-Title-option">
+        <label for="login-color-form-title-option">Form Title Color</label>
+        <select class="color-select" id="login-color-form-title-option">
+          <option value="login-color-input-HEX-formTitle-color"> Hex</option>
+          <option value="login-color-input-RGB-formTitle-color"> RGB</option>
+          <option value="login-color-input-inputColor-formTitle-color"> Input-Color</option>
+        </select>
+        <input type="text" maxlength = "6" class="color-input  login-color-input-HEX " id="login-color-input-HEX-formTitle-color"  value="34495e">
+        <input type="text" class="color-input  login-color-input-RGB " id="login-color-input-RGB-formTitle-color" placeholder="125,85,200">
+        <input type="color" class="color-input  login-color-input-color " id="login-color-input-inputColor-formTitle-color" value="#34495e">
+
+      </div>
+
+
+      <div class="row" id="login-color-inpu-border-option">
+        <label for="login-color-input-border-option">input border Color</label>
+        <select class="color-select" id="login-color-input-border-option">
+          <option value="login-color-input-HEX-inputBorder-color"> Hex</option>
+          <option value="login-color-input-RGB-inputBorder-color"> RGB</option>
+          <option value="login-color-input-inputColor-inputBorder-color"> Input-Color</option>
+        </select>
+        <input type="text" maxlength = "6" class="color-input  login-color-input-HEX " id="login-color-input-HEX-inputBorder-color"  value="bbbbbb">
+        <input type="text" class="color-input  login-color-input-RGB " id="login-color-input-RGB-inputBorder-color" placeholder="125,85,200">
+        <input type="color" class="color-input  login-color-input-color " id="login-color-input-inputColor-inputBorder-color" value="#bbbbbb">
+
+      </div>
+
+
+      <div class="row" id="login-color-lablel-color-option">
+        <label for="login-color-label-color-option">label Color</label>
+        <select class="color-select" id="login-color-label-color-option">
+          <option value="login-color-input-HEX-labelColor-color"> Hex</option>
+          <option value="login-color-input-RGB-labelColor-color"> RGB</option>
+          <option value="login-color-input-inputColor-labelColor-color"> Input-Color</option>
+        </select>
+        <input type="text" maxlength = "6" class="color-input  login-color-input-HEX " id="login-color-input-HEX-labelColor-color"  value="272727">
+        <input type="text" class="color-input  login-color-input-RGB " id="login-color-input-RGB-labelColor-color" placeholder="125,85,200">
+        <input type="color" class="color-input  login-color-input-color " id="login-color-input-inputColor-labelColor-color" value="#272727">
+
+      </div>
+
+
+      <div class="row" id="login-color-link-color-option">
+        <label for="login-color-link-color-option">links Color</label>
+        <select class="color-select" id="login-color-link-color-option">
+          <option value="login-color-input-HEX-linkColor-color"> Hex</option>
+          <option value="login-color-input-RGB-linkColor-color"> RGB</option>
+          <option value="login-color-input-inputColor-linkColor-color"> Input-Color</option>
+        </select>
+        <input type="text" maxlength = "6" class="color-input  login-color-input-HEX " id="login-color-input-HEX-linkColor-color"  value="3498db">
+        <input type="text" class="color-input  login-color-input-RGB " id="login-color-input-RGB-linkColor-color" placeholder="125,85,200">
+        <input type="color" class="color-input  login-color-input-color " id="login-color-input-inputColor-linkColor-color" value="#3498db">
+
+      </div>
+
+
+      <div class="row" id="login-color-button-background-color-option">
+        <label for="login-color-button-background-color-option">button backgroun Color</label>
+        <select class="color-select" id="login-color-button-background-color-option">
+          <option value="login-color-input-HEX-buttonBackground-color"> Hex</option>
+          <option value="login-color-input-RGB-buttonBackground-color"> RGB</option>
+          <option value="login-color-input-inputColor-buttonBackground-color"> Input-Color</option>
+        </select>
+        <input type="text" maxlength = "6" class="color-input  login-color-input-HEX " id="login-color-input-HEX-buttonBackground-color"  value="e74c3c">
+        <input type="text" class="color-input  login-color-input-RGB " id="login-color-input-RGB-buttonBackground-color" placeholder="125,85,200">
+        <input type="color" class="color-input  login-color-input-color " id="login-color-input-inputColor-buttonBackground-color" value="#e74c3c">
+
+      </div>
+
+
+      <div class="row" id="login-color-button-text-color-option">
+        <label for="login-color-button-text-color-option">button text Color</label>
+        <select class="color-select" id="login-color-button-text-color-option">
+          <option value="login-color-input-HEX-buttonText-color"> Hex</option>
+          <option value="login-color-input-RGB-buttonText-color"> RGB</option>
+          <option value="login-color-input-inputColor-buttonText-color"> Input-Color</option>
+        </select>
+        <input type="text" maxlength = "6" class="color-input  login-color-input-HEX " id="login-color-input-HEX-buttonText-color"  value="ffffff">
+        <input type="text" class="color-input  login-color-input-RGB " id="login-color-input-RGB-buttonText-color" placeholder="125,85,200">
+        <input type="color" class="color-input  login-color-input-color " id="login-color-input-inputColor-buttonText-color"value="#ffffff">
+
+      </div>
+
+
+      <div class="row" id="login-color-button-border-color-option">
+        <label for="login-color-button-border-color-option">button border Color</label>
+        <select class="color-select" id="login-color-button-border-color-option">
+          <option value="login-color-input-HEX-buttonBorder-color"> Hex</option>
+          <option value="login-color-input-RGB-buttonBorder-color"> RGB</option>
+          <option value="login-color-input-inputColor-buttonBorder-color"> Input-Color</option>
+        </select>
+        <input type="text" maxlength = "6" class="color-input  login-color-input-HEX " id="login-color-input-HEX-buttonBorder-color"  placeholder="none">
+        <input type="text" class="color-input  login-color-input-RGB " id="login-color-input-RGB-buttonBorder-color" placeholder="125,85,200">
+        <input type="color" class="color-input  login-color-input-color " id="login-color-input-inputColor-buttonBorder-color">
+
+      </div>
+
+
+
+
+
+
+
+    </div>
+    </div>
+    <div class="login-content login-size-details " id="login-size-details">
+      <div class="">
+
+    <label for="inputWidthInput">inputs width</label>
+      <input type="number" value="100" id="inputWidthInput">
+      <select class="" name="" id="inputWidthSelect">
+        <option value="%">%</option>
+        <option value="px">px</option>
+      </select>
+    </div>
+    <div class="">
+
+    <label for="inputheightInput">inputs height</label>
+      <input type="number" step=".1" id="inputheightInput" value='3.2'>
+      <select class="" name="" id="inputheightSelect">
+        <option value="em">em</option>
+        <option value="px">px</option>
+      </select>
+    </div>
+
+    <div class="">
+    <label for="btnWidthInput">Button width</label>
+      <input type="number" value="200" id="btnWidthInput">
+      <select class="" name="" id="btnWidthSelect">
+        <option value="px">px</option>
+        <option value="%">%</option>
+      </select>
+    </div>
+
+<div class="">
+
+
+    <label for="btnHeightInput">Button Height</label>
+      <input type="number" value="35" id="btnHeightInput" step="1">
+      <select class="" name="" id="btnHightSelect">
+        <option value="px">px</option>
+        <option value="em">em</option>
+      </select>
+    </div>
+
+
+
+      </div>
+
+    <div class="login-content login-fonts-details " id="login-fonts-details">
+
+
+        <div class="font-editor-login">
+          <div>
+            <label for="fontStyle"> Font Style :</label>
+
+            <select id="fontStyle" >
+              <option value="normal" >normal</option>
+              <option value="italic">italic</option>
+              <option value="oblique">oblique</option>
+            </select>
+
+            <label for="targetFontStyle"> Target </label>
+            <select id="targetFontStyle">
+              <option value=".cp-login-form-title">Form Title</option>
+              <option value=".cp-label">Labels</option>
+              <option value=".cp-link">Links</option>
+              <option value=".cp-button">button Text</option>
+            </select>
+
+          </div>
+
+          <div>
+
+            <label for="fontWeight">Font Weight: </label>
+            <select id="fontWeight" name="font-weight">
+              <option value="normal" >normal</option>
+              <option value="bold">bold</option>
+              <option value="bolder">bolder</option>
+              <option value="lighter">lighter</option>
+            </select>
+
+            <label for="targetFontWeight"> Target </label>
+            <select id="targetFontWeight">
+              <option value=".cp-login-form-title">Form Title</option>
+              <option value=".cp-label">Labels</option>
+              <option value=".cp-link">Links</option>
+              <option value=".cp-button">button Text</option>
+            </select>
+          </div>
+
+          <div >
+            <label for="fontFamily">Font Family: </label>
+            <select id="fontFamily" name="font-family">
+              <option value="Arial">Arial</option>
+              <option value="serif">serif</option>
+              <option value="cursive">cursive</option>
+              <option value="fantasy">fantasy</option>
+              <option value="monospace">monospace</option>
+            </select>
+
+            <label for="targetFontFamily"> Target </label>
+            <select id="targetFontFamily">
+              <option value=".cp-login-form-title">Form Title</option>
+              <option value=".cp-label">Labels</option>
+              <option value=".cp-link">Links</option>
+              <option value=".cp-button">button Text</option>
+            </select>
+          </div>
+
+          <div >
+            <label for="fontSize">Font Size: </label>
+            <input id='fontSize' type="range"  min=".5" max="3" step=".1" name="font-size">
+            <span id="fontSizeValue">1.75 em</span>
+
+            <label for="targetFontSize"> Target </label>
+            <select id="targetFontSize">
+              <option value=".cp-login-form-title">Form Title</option>
+              <option value=".cp-label">Labels</option>
+              <option value=".cp-link">Links</option>
+              <option value=".cp-button">button Text</option>
+            </select>
+
+
+          </div>
+
+      </div>
+
+
+
+
+
+
+
+
+      </div>
+    <div class="login-content login-spaces-details " id="login-spaces-details">
+      <div class="">
+
+      <label for="labelInLine">The Labels in a line by itselves</label>
+      <input type="checkbox" id="labelInLine">
+    </div>
+    <div class="">
+
+
+      <label for="position">Position: </label>
+      <select id="position" name="font-family">
+        <option value="center">Center</option>
+        <option value="right">Right</option>
+        <option value="left">Left</option>
+      </select>
+
+      <label for="targetPosition"> Target </label>
+      <select id="targetPosition">
+        <option value=".cp-login-form-title">Form Title</option>
+        <option value=".cp-label">Labels</option>
+        <option value=".cp-input">Inputs</option>
+        <option value=".cp-link">Links</option>
+        <option value=".cp-button">button</option>
+      </select>
+    </div>
+
+<div class="">
+
+
+      <label for="topMargin">Virtical Spaces: </label>
+      <input id='topMargin' type="range"  min=".5" max="3" step=".1" >
+      <span id="topMarginValue">1.75 em</span>
+
+      <label for="targetTopMargin"> Target </label>
+      <select id="targetTopMargin">
+        <option value=".cp-login-form-title">Form Title</option>
+        <option value=".cp-label">First Label</option>
+        <option value=".cp-input">Inputs</option>
+        <option value=".cp-link">Links</option>
+        <option value=".cp-button">button</option>
+      </select>
+
+    </div>
+
+
+
+
+
+      </div>
+
+
+
+      <div class="GenerateCodeDiv">
+        <button type="button" id="generateNavbarCodeButton" class="generateCodeButton">Generate Code</button>
+      </div>
+
+      </section>
+
+
+  <section class="loginPreview">
+    <fieldset class="previewCss">
+      <legend>Preview</legend>
+
+
+
+      <div class="LoginFormContainer" id="LoginFormContainer">
+          <form class="cp-login-form" id="cp-login-form" action="/login">
+            <h2 class="cp-login-form-title" id="cp-login-form-title">Form Title</h2>
+            <div class="cp-login-inputs-div" id="cp-login-inputs-div">
+              <div class="">
+                      <label class="cp-label" for="cp-input-0" id="cp-lable-0">Email</label>
+                      <input class="cp-input" type="email" name="email" placeholder="Input your email" id="cp-input-0">
+                    </div>
+                      <div class="">
+                      <label class="cp-label"for="cp-input-1" id="cp-lable-1">Password</label>
+                      <input  class=" cp-input"  type="password" name="password" placeholder="Input your password" id="cp-input-1">
+                    </div>
+            </div>
+              <a href="ForgetPassword" id="cp-link-0" class="cp-link">Forget Password ?</a>
+              <button class="cp-button" type="submit" id="cp-login-submit">Login</button>
+          </form>
+        </div>
+    </fieldset>
+
+  </section>
+
+
+
+
+
+
+
+
+</div>
+
+
+  <section class="resultContainer" id="resultContainer" style="display:none">
+    <input type="button" name="Back" value="Back" class="backToEditing" id='backToEditing'>
+
+  <div class="result">
+
+    <div class="cssCodeLogin">
+      <h3 style="text-align:center">CSS</h3>
+      <textarea name="name" id="cssCodeList" ></textarea>
+
+      <input type="button"  value="Copy" class="copybtn" id='copyCssBtn'>
+    </div>
+
+
+    <div class="htmlCodeLogin">
+      <h3 style="text-align:center">HTML</h3>
+      <textarea name="name" id="htmlCodeList"></textarea>
+
+      <input type="button"  value="Copy" class="copybtn" id='copyHtmlBtn'>
+    </div>
+    </div>
+
+  </section>
+  <script type="text/javascript" src="./js/login.js"></script>
+<script type="text/javascript" src="./js/cssWriter.js"></script>
+<script type="text/javascript" src="./js/cssBuilderLogin.js"></script>
+<script type="text/javascript" src="./js/colorEditorLogin.js"></script>
+<script type="text/javascript" src="./js/sizeLogin.js"></script>
+<script type="text/javascript" src="./js/fontEditorLogin.js"></script>
+<script type="text/javascript" src="./js/spacesEditorLogin.js"></script>
+<script type="text/javascript" src="./js/generatorLogin.js"></script>

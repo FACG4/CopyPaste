@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="/css/style.css">
+
+<div class="centeredTitle">
+  <h1>Welcome {{capitalize name}}, here you can find your code!</h1>
+</div>
+
+
+<div class="htmlCode">
+<h3 style="text-align:center">HTML</h3><br>
+  {{#each htmlCode}}
+   <div class="a"  ><span class="newSpan">{{this.html_code}}</span></div><br>
+  {{/each}}
+</div>
+
+
+
+
+<div class="cssCode">
+  <h3 style="text-align:center">CSS</h3><br>
+  {{#each cssCode}}
+     <div class="a"><span class="newSpan">{{this.css_code}}</span></div><br>
+  {{/each}}
+</div>
+
+
+<!-- <script src="./js/userPageDomForDisplyingCode.js"></script> -->

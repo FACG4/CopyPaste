@@ -1,15 +1,18 @@
-# CopyPaste
+# CopyPaste :pencil: 
 
-
-### Description of the App:
-
-Customizable front-end template for building fast, robust, and adaptable web apps or sites,it generates code for styled components, so developers can spend more time developing and less time styling.
+## Our Idea :sparkles: :sparkles:
 
 ### Problem Statement:
 
 Wasting time on repetitive `html` and `css` code for web developers every time they are building a new web app.
 
-### User Stories:
+### Description of the App:
+
+Customizable front-end template for building fast, robust, and adaptable web apps or sites,it generates code for styled components, so developers can spend more time developing and less time styling.
+
+
+
+## User Stories :sparkles: :sparkles:
 
 * As a web developer, I need an easy way to generate code for navbar.
 * As a web developer, I need an easy way to generate code for login page.
@@ -18,11 +21,11 @@ Wasting time on repetitive `html` and `css` code for web developers every time t
 
 
 
-### Link for prototype:
+## Link for prototype:
 
 https://www.figma.com/proto/VWxnVmZPLNuL8k3TwiQOvuli/CopyPaste?node-id=106%3A0&scaling=contain
 
 
-### Tech Stack:
+## Tech Stack:
 
-`html` `css` `javaScript`
+`html` `css` `javaScript` `Express framework` `Node.js` `PostgreSQL`

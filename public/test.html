@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.a {
+    white-space: nowrap;
+    width: 100px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+
+}
+
+
+</style>
+</head>
+<body>
+
+
+
+<div class="a" id="a">This is some long text that will not fit in the box.</div>
+
+</body>
+</html>
+
+<script>
+let flag = true;
+const a = document.getElementById('a');
+a.addEventListener('click', ()=>{
+
+ if(flag){
+   a.style.overflow = 'visible';
+   flag=false;
+ }
+
+ else{
+   a.style.overflow = 'hidden';
+   flag=true;
+ }
+})
+
+</script>
