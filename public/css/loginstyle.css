@@ -1,0 +1,156 @@
+html {
+    overflow-y: scroll;
+}
+
+.loginInput{
+  width: 500px;
+  height: 50px;
+  border-radius: 12px;
+  padding-left: 20px;
+  font-size: 20px
+}
+.loginButton{
+  width: 500px;
+  height: 50px;
+  border-radius: 12px;
+  padding-left: 20px;
+  font-size: 20px;
+  background-color:#EF5552;
+  color: white;
+}
+.loginButton:hover{
+  background-color: #F4CA19;
+  color: #3B5998;
+}
+
+ .Welcome{
+   margin-top: 50px;
+   color: #EF5552;
+ }
+
+ .login{
+   text-align: center;
+ }
+.forget{
+  text-align: center;
+}
+
+
+
+.field-wrap {
+  position:relative;
+  margin-bottom:40px;
+}
+
+
+
+.button-block {
+  display:block;
+  width:100%;
+}
+
+
+
+
+
+.post{
+  width: 99%;
+  color: #CB577C;
+  height: 50px;
+  background-color:#F7E7EC;
+  border-radius: 12px;
+  padding-top: 15px;
+  padding-left: 15px
+}
+
+.nav{
+     height: 90px;
+    width: 100%;
+    background-color: #CB577C;
+    color: #7E5805;
+    text-align: left;
+ }
+.footer{
+     height: 50px;
+    width: 100%;
+    background-color: #CB577C;
+    color: white;
+    text-align: center;
+    position: fixed;
+      left: 10px;
+      bottom: 10px;
+}
+
+.footerText{
+  color: white;
+   text-align: center;
+}
+.headText{
+  color: white;
+font-size: 20px;
+ margin-left: 20px;
+ margin-top: 20px
+
+}
+
+.addPost1{
+  color:white;
+  background-color: #DA8FA7;
+  border-radius: 12px;
+ }
+
+ .addPost1:hover{
+   background-color: #CB577C;
+  }
+.hrefName{
+  color: #CB577C;
+ }
+.hrefPostName{
+  color: #CB577C;
+  font-weight:bolder;
+ }
+
+.hrefName:hover{
+  color:#36111C;
+  font-weight: bold;
+}
+.hrefPostName:hover{
+  color:#36111C;
+  font-weight:1000;
+}
+
+.textarea{
+  border-radius: 16px;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+.textarea:hover{
+  border-color:#CB577C;
+  color: #CB577C;
+}
+
+.center{
+  text-align: center;
+}
+
+.sendComment{
+  width: 100px;
+  height: 30px;
+  border-radius: 12px;
+   font-size: 15px;
+  background-color:#DA8FA7;
+  color: white;
+}
+
+.sendComment:hover{
+  background-color:#CB577C;
+}
+
+.right{
+  text-align: right;
+ }
+
+
+.tab-content {
+  text-align: center;
+}

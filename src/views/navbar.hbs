@@ -1,0 +1,223 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/navbar.css">
+<link rel="stylesheet" href="/css/style.css">
+
+<div class="allSections">
+  <section class="navPreview">
+    <fieldset class="previewCss">
+      <legend>preview</legend>
+      <nav id="cp-navbar-container">
+        <ul class="cp-navbar-container">
+          <li id="cp-navbar-fix-holder"></li>
+        </ul>
+      </nav>
+    </fieldset>
+  </section>
+
+  <section class="navEditContainer ">
+    <input class="hidden" id="Main" type="radio" name="tabs" checked>
+    <label for="Main">Main</label>
+    <input class="hidden" id="Color" type="radio" name="tabs">
+    <label for="Color">Color</label>
+    <input class="hidden" id="Font" type="radio" name="tabs">
+    <label for="Font">Font</label>
+    <input class="hidden" id="Hover" type="radio" name="tabs">
+    <label for="Hover">Hover</label>
+
+
+    <div class="nav-content" id="nav-main-details">
+      <div class="navbarPositionContainer">
+        <span class="label">Navbar height </span>
+        <input type="number" class="heightInputForNavbar" name="navHeight" id="navHeight">
+        <span>px</span>
+        <br><br>
+        <span class="label">Fixed Positin</span>
+        <input type="checkbox" class="navbarPosition" name="" value=""><br><br><br>
+
+      </div>
+      <div class="addLinkDiv">
+        <input type="button" name="" class="addNewLinkBtn" value="+">
+        <label for="addNewLinkBtn">Add Link</label>
+
+      </div>
+
+      <div class="main">
+        <div class="innerMainSectionForNavbar">
+        </div>
+        <div class="editLinksDiv">
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-color-detail nav-content" id="nav-color-details">
+      <div class="color-editor">
+        <div class="row nav-color-background-div" id="nav-color-background-div">
+          <label for="nav-background-color-option">Navbar Background Color</label>
+
+          <select class="color-select" id="nav-background-color-option">
+        <option value="nav-color-input-HEX-navbackground-color" > Hex</option>
+        <option value="nav-color-input-RGB-navbackground-color"> RGB</option>
+        <option value="nav-color-input-inputColor-navbackground-color" > Input-Color</option>
+        </select>
+
+          <input type="text" maxlength="6" class="color-input  nav-color-input-HEX " id="nav-color-input-HEX-navbackground-color" placeholder="fc120a">
+          <input type="text" class="color-input  nav-color-input-RGB " id="nav-color-input-RGB-navbackground-color" placeholder="125,85,200">
+          <input type="color" class="color-input  nav-color-input-color " id="nav-color-input-inputColor-navbackground-color">
+        </div>
+        <div class="row  nav-color-link-div">
+          <label for="nav-color-link-option">Links Color</label>
+          <select class="color-select" id="nav-color-link-option">
+          <option value="nav-color-input-HEX-link-color" > Hex</option>
+          <option value="nav-color-input-RGB-link-color" > RGB</option>
+          <option value="nav-color-input-inputColor-link-color"> Input-Color</option>
+          </select>
+          <input type="text" maxlength="6" class="color-input  nav-color-input-HEX " id="nav-color-input-HEX-link-color" placeholder="fc120a">
+          <input type="text" class="color-input  nav-color-input-RGB " id="nav-color-input-RGB-link-color" placeholder="125,85,200">
+          <input type="color" class="color-input  nav-color-input-color " id="nav-color-input-inputColor-link-color">
+        </div>
+        <div class="row" id="nav-color-active-link-div">
+          <label for="nav-color-active-link-option">Active links Color</label>
+          <select class="color-select" id="nav-color-active-link-option">
+        <option value="nav-color-input-HEX-active-link-color"> Hex</option>
+        <option value="nav-color-input-RGB-active-link-color"> RGB</option>
+        <option value="nav-color-input-inputColor-active-link-color"> Input-Color</option>
+        </select>
+          <input type="text" maxlength="6" class="color-input  nav-color-input-HEX " id="nav-color-input-HEX-active-link-color" placeholder="fc120a">
+          <input type="text" class="color-input  nav-color-input-RGB " id="nav-color-input-RGB-active-link-color" placeholder="125,85,200">
+          <input type="color" class="color-input  nav-color-input-color " id="nav-color-input-inputColor-active-link-color">
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Font Tab -->
+    <div class="nav-content" id="nav-font-details">
+      <div class="font-editor">
+        <div>
+
+          <label for="font-style">Font Style: </label>
+          <select id="font-style" name="font-style">
+              <option value="normal" >normal</option>
+              <option value="italic">italic</option>
+              <option value="oblique">oblique</option>
+            </select>
+        </div>
+
+        <div>
+
+          <label for="font-weight">Font Weight: </label>
+          <select id="font-weight" name="font-weight">
+              <option value="normal" >normal</option>
+              <option value="bold">bold</option>
+              <option value="bolder">bolder</option>
+              <option value="lighter">lighter</option>
+            </select>
+        </div>
+
+        <div>
+          <label for="font-family">Font Family: </label>
+          <select id="font-family" name="font-family">
+              <option value="Arial">Arial</option>
+              <option value="serif">serif</option>
+              <option value="cursive">cursive</option>
+              <option value="fantasy">fantasy</option>
+              <option value="monospace">monospace</option>
+            </select>
+        </div>
+
+        <div>
+          <label for="font-size">Font Size: </label>
+          <input class="font-size" id='font-size' type="range" min=".5" max="3" step=".1" name="font-size">
+          <span id="font-size-value">1.75 em</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- End Font Tab -->
+
+
+    <div class="nav-content" id="nav-hover-details">
+      <div class="hover-editor">
+
+
+        <div class="row nav-hovor-link-background-color-div" id="nav-hovor-link-background-color-div">
+          <label for="nav-hover-color-option">Hovor link Background Color</label>
+
+          <select class="color-select" id="nav-hover-color-option">
+          <option value="nav-color-input-HEX-hover-color" > Hex</option>
+          <option value="nav-color-input-RGB-hover-color"> RGB</option>
+          <option value="nav-color-input-inputColor-hover-color" > Input-Color</option>
+          </select>
+
+          <input type="text" maxlength="6" class="color-input nav-hovor-input   nav-hover-input-HEX " id="nav-color-input-HEX-hover-color" placeholder="fc120a">
+          <input type="text" class=" color-input nav-hover-input   nav-hover-input-RGB " id="nav-color-input-RGB-hover-color" placeholder="125,85,200">
+          <input type="color" class="color-input nav-hover-input   nav-hover-input-color " id="nav-color-input-inputColor-hover-color">
+        </div>
+        <div class="row nav-hovor-link-background-color-div" id="nav-hover-link-background-color-div">
+          <label class="checkboxContainer">Add underline when hover on link
+              <input type="checkbox"  id="textDecorationCheck">
+              <span class="checkmark"></span>
+            </label>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="GenerateCodeDiv">
+    <button type="button" id="generateNavbarCodeButton" class="generateCodeButton">Generate Code</button>
+  </div>
+</div>
+
+<section class="resultContainer">
+  <button type="button" name="Back" class="backToEditing" id="backToEditing"><i class="fas fa-angle-left"></i> Back</button>
+
+  <div class="result">
+
+    <div class="cssCode">
+      <h3 style="text-align:center">CSS</h3>
+<div id="cssMsg">
+
+</div>
+      <form  method="post">
+        <textarea class="textarea" name="cssCodeList" id="cssCodeList" rows="20" cols="25"></textarea>
+        <!-- To make just logged users able to save codeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee -->
+
+        {{#if name}}
+          <input style="display:block" type="submit" value="Save" id="saveCssBtn" name="saveCssBtn" class="copybtn" title="Saved code will be added into your profile :)">
+        {{else}}
+          <input style="display:none" type="submit" value="Save" id="saveCssBtn" name="saveCssBtn" class="copybtn" title="Saved code will be added into your profile :)">
+        {{/if}}
+      </form>
+
+      <input type="button" value="Copy" name="copyCssBtn" class="copybtn" id='copyCssBtn'>
+    </div>
+
+    <div class="htmlCode">
+      <h3 style="text-align:center">HTML</h3>
+      <div id="htmlMsg">
+
+      </div>
+      <form  id="form" method="post">
+        <textarea class="textarea" name="htmlCodeList" id="htmlCodeList" rows="20" cols="25"></textarea>
+        {{#if name }}
+          <input style="display:block" type="submit" value="Save" id="saveHtml" name="saveHtmlBtn" class="copybtn" title="Saved code will be added into your profile :)">
+        {{else}}
+          <input style="display:none" type="submit" value="Save" id="saveHtml" name="saveHtmlBtn" class="copybtn" title="Saved code will be added into your profile :)">
+        {{/if}}
+
+      </form>
+      <input type="button" value="Copy" class="copybtn" id='copyHtmlBtn'>
+    </div>
+  </div>
+</section>
+
+<script type="text/javascript" src="./js/cssWriter.js"></script>
+<script type="text/javascript" src="./js/mainEditor.js"></script>
+<script type="text/javascript" src="./js/colorEditor.js"></script>
+<script type="text/javascript" src="./js/fontEditor.js"></script>
+<script type="text/javascript" src="./js/hoverEditor.js"></script>
+<script type="text/javascript" src="./js/generator.js"></script>
+<script type="text/javascript" src="./js/insertCodeValidation.js"></script>
+<script type="text/javascript" src="./js/sendCodeDB.js">
+
+</script>
