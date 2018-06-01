@@ -9,6 +9,8 @@ const logout = require('./logout');
 const error = require('./error');
 const insert_codes = require('./insert_codes');
 const loginComponent = require('./loginComponent');
+const {checkAuth} = require('./checkAuth');
+
 
 router.get('/', home.get);
 
